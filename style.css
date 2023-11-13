@@ -68,6 +68,9 @@ body {
   flex-direction: column;
   margin: 0%;
 }
+main {
+  flex-grow: 1;
+}
 
 footer {
   margin-top: auto;
