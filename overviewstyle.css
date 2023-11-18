@@ -79,7 +79,7 @@ main {
 
 footer {
   margin-top: auto;
-  background-color:  rgb(113, 216, 227);
+  background-color:  #D9D9D9;
 }
 
 .footer-wrapper {
@@ -119,8 +119,6 @@ footer {
 .footer-social-row{
     margin-right: 50px;
 }
-
-
 
 @media only screen and (min-width: 768px) {
     .footer-wrapper {
