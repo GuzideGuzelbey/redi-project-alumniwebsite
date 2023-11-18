@@ -90,34 +90,42 @@ footer {
     padding: 16px;
 }
 
-.footer-wrapper p {
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
 
 .footer-wrapper-section{
     flex-basis: 100%;
     margin-right: 10px;
-    margin-bottom: 50px;
-    color: whitesmoke;
+    margin-bottom: 80px;
+    color: #6C6A6E;
+    font-family: 'Poppins';
+}
+
+.footer-wrapper-section {
+  color: #6C6A6E;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 400;
+  word-wrap: break-word
 }
 
 .footer-title {
     margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #6C6A6E;
+    font-family: 'Poppins';
+    font-size: 36px;
 }
 
 .footer-paragraph-involved{
     margin-right: 5px;
 }
 
-.footer-section-list li {
-    margin-bottom: 10px;
+.footer-social-row{
+    margin-right: 30%;  
 }
 
-.footer-social-row{
-    margin-right: 50px;
+.footer-social-row img{
+  padding: 5px;
 }
 
 @media only screen and (min-width: 768px) {
