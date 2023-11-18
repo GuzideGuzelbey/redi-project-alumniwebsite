@@ -99,10 +99,10 @@ footer {
     font-family: 'Poppins';
 }
 
-.footer-wrapper-section {
+.footer-wrapper-section a, p{
   color: #6C6A6E;
   font-family: 'Poppins';
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   word-wrap: break-word
 }
@@ -113,17 +113,21 @@ footer {
     font-weight: 600;
     color: #6C6A6E;
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 24px;
 }
 
-.footer-paragraph-involved{
-    margin-right: 5px;
+.footer-social-row{
+  float: center;
 }
 
-.footer-social-row
+.copyright{
+  float: center;
+}
 
 .footer-social-row img{
-  padding: 5px;
+  padding: 10px;
+  float: center;
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
