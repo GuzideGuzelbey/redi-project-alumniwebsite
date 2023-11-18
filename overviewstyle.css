@@ -102,7 +102,7 @@ footer {
 .footer-wrapper-section {
   color: #6C6A6E;
   font-family: 'Poppins';
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 400;
   word-wrap: break-word
 }
@@ -113,16 +113,14 @@ footer {
     font-weight: 600;
     color: #6C6A6E;
     font-family: 'Poppins';
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .footer-paragraph-involved{
     margin-right: 5px;
 }
 
-.footer-social-row{
-    margin-right: 30%;  
-}
+.footer-social-row
 
 .footer-social-row img{
   padding: 5px;
