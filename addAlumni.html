@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="form.js"></script>
+    <title>Alumni Website - ReDI School Aarhus</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Alumni Update Form</h1>
+        <h2>Tell us about yourself</h2>
+        <p>Basic Example</p>
+      </header>
+      <form id="alumniForm">
+        <select>
+          <option selected disabled>-- Please choose an option --</option>
+          <option>Web Development</option>
+          <option>UX/UI Design</option>
+          <option>Cybersecurity</option>
+          <option>Data Analytics</option>
+        </select>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="skills">Skills/Competencies:</label>
+        <textarea id="skills" rows="4" cols="30" required></textarea>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required />
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="text" id="linkedin" />
+
+        <label for="cv">Upload CV:</label>
+        <input type="file" id="cv" accept=".pdf,.doc,.docx" />
+        <!-- PDF, Word files-->
+        <button type="submit">Submit</button>
+      </form>
+      <footer>
+        <p>
+          <a
+            href="https://www.redi-school.org/redi-school-aarhus"
+            target="_blank"
+            >Visit our website</a
+          >
+        </p>
+        <p>All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
