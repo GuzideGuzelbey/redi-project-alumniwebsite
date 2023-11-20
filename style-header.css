@@ -1,10 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
 }
+
+/* Header navigation bar */
 
 nav {
   background: #ffffff;
@@ -35,14 +34,14 @@ nav ul li a {
   border-radius: 3px;
   text-decoration: underline;
 }
-li a.active,
-li a:hover {
+nav li a.active,
+nav li a:hover {
   text-decoration: underline;
   transition: 0.5s;
   color: #6c6a6e;
 }
 
-.checkbtn {
+.checkbtn-navbar {
   font-size: 30px;
   color: #000000;
   float: right;
@@ -53,12 +52,6 @@ li a:hover {
 }
 #check {
   display: none;
-}
-section {
-  background: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: calc(100vh - 80px);
 }
 
 @media (max-width: 952px) {
@@ -71,7 +64,7 @@ section {
 }
 
 @media (max-width: 858px) {
-  .checkbtn {
+  .checkbtn-navbar {
     display: block;
   }
   ul {
@@ -94,8 +87,8 @@ section {
     color: #ffffff;
     text-decoration: none;
   }
-  li a:hover,
-  li a.active {
+  nav li a:hover,
+  nav li a.active {
     background: none;
     color: #ffffff;
     text-decoration: underline;
@@ -104,8 +97,9 @@ section {
     left: 0;
   }
 }
+/* header banner  */
 
-.intro {
+.intro-banner {
   background: linear-gradient(
       to left,
       rgba(0, 0, 144, 0.1),
@@ -113,7 +107,7 @@ section {
     ),
     url("images/banner-intro.jpg") no-repeat;
   background-size: cover;
-  font-family: Avenir;
+  font-family: "Poppins";
   background-position: center center;
   height: calc(70vh - 80px);
   display: flex;
@@ -121,20 +115,22 @@ section {
   justify-content: center;
   flex-direction: column;
 }
-.intro .row h1 {
+.intro-banner .row h1 {
   text-align: center;
   font-size: 2.5rem;
   color: white;
   margin: 0 1.5rem;
 }
 
-.intro .row-button {
+/* header banner - button  */
+
+.intro-banner .row-button {
   display: block;
   margin: 20px auto;
   color: #ffffff;
   background-color: #e96b1d;
   font-size: 18px;
-  font-family: Avenir;
+  font-family: "Poppins";
   padding: 20px 20px;
   border: none;
   border-radius: 10px;
