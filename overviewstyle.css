@@ -79,82 +79,68 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer-left{
+    box-sizing: border-box;
+    background-color: #2196F3;
+    padding: 20px;
+    float: left;
+    width: 20%; /* The width is 20%, by default */
+    height:200px;  
+}
+
+.footer-middle{
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+  height:200px;
+  
+}
+
+.footer-middle p{
   margin-top: auto;
-  background-color:  #D9D9D9;
 }
 
-.footer-wrapper {
+.footer-middle p, img{
+  margin: 5px;
+}
+
+.footer-middle-images{
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 40px;
-  padding-left: 40px;
-}
-
-.footer-wrapper-left{
-  padding-left: 20px;
-}
-
-.footer-wrapper-left a{
-  color: #6C6A6E;
-  font-family: 'Poppins';
-  font-size: 14px;
-  font-weight: 400;
-}
-.phone{
-  color: #6C6A6E;
-  font-family: 'Poppins';
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.footer-title {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #6C6A6E;
-  font-family: 'Poppins';
-  font-size: 24px;
-}
-
-.footer-social-row{
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.footer-middle-text{
+  text-align: center;
 }
 
-.copyright{
-  padding-left: 30px;
-  color: #525356;
-  font-size: 12px;
-  font-family: 'Poppins';
+.footer-right {
+  box-sizing: border-box;
+  background-color: whitesmoke;  
+  float: left;
+  width: 20%; /* The width is 20%, by default */ 
+  height: 200px; 
 }
 
-.footer-social-row img{
-  padding: 6px;
-  max-width: 100%;
-}
-
-@media only screen and (min-width: 835px){
-    footer{
-      justify-content: center;
-    }
-    .footer-wrapper {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .footer-wrapper-left {
-      flex-basis: 30%;
-    }
-
-    .footer-wrapper-right {
-      margin-bottom: 0;
-      flex-basis: 60%;
-      justify-content: center;
-    }
+@media screen and (max-width: 834px) {
+  .footer-left, .footer-middle, .footer-right {
+    width: 100%; /* The width is 100%, when the viewport is 834px or smaller */
+  }
 }
 
 
+/* body part*/
 
 .row {
   display: flex;
