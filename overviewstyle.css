@@ -136,7 +136,7 @@ footer {
 @media screen and (max-width: 834px) {
   .footer-left, .footer-middle, .footer-right {
     width: 100%; /* The width is 100%, when the viewport is 834px or smaller */
-  }
+}
 
   .footer-left{
     align-items: center;
