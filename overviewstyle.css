@@ -5,7 +5,8 @@ body {
   margin: 0%;
 }
 
-/* main part*/
+/* middle part*/
+
 main {
   flex-grow: 1;
   background-color: #EBE9E9;
@@ -37,7 +38,7 @@ main {
   flex-direction: row;
   float: left;
   box-sizing: border-box;
-  
+
 }
 
 .sort{
