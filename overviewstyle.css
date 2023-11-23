@@ -5,8 +5,18 @@ body {
 }
 
 /* middle part*/
+.alumni-profile-overview-header{
+  background-color: #9FDAE9D9;
+}
 
-main {
+.btn.btn-social-icon{
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: #0177b5;
+}
+
+/* main {
   flex-grow: 1;
   background-color: #EBE9E9;
 }
@@ -57,7 +67,7 @@ main {
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
-}
+} */
 
 /*===== For Footer =====*/
 

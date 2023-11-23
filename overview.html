@@ -7,8 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style-header.css">
         <link rel="stylesheet" href="overviewstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-        <script src="overview.js" defer=""></script>
+        
     </head>
     <body>
         <header>
@@ -32,27 +35,95 @@
         <section class="intro-banner"><div class="row" ><h1>Discover ReDi Alumni Profiles</h1></div> <button class="row-button">Explorer Profiles</button>
         </section>
         </header>
-        <main>
-            <div class="container">
-                <div class="filter">
-                    <p style="color: rgb(9, 9, 9)">Filter</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="accordion accordion-flush" id="filter">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Course Type
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                                <div class="accordion" id="courseTypeFilter">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton" aria-expanded="true" aria-controls="courseTypeFilterButton">
+                                            UX/UI Design
+                                        </button>
+                                      </h2>
+                                      <div id="courseTypeFilterButton" class="accordion-collapse collapse show" data-bs-parent="#courseTypeFilter">
+                                        <div class="accordion-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">User Experience Design</label>
+                                                </li>
+                                                <li class="list-group-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                                  <label class="form-check-label" for="secondCheckbox">User Interface Design</label>
+                                                </li>
+                                                <li class="list-group-item border-0">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                                  <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="alumniprofile">
-                    <p style="color: black">Alumni Profile</p>
+                <div class="col-9">
+                    <div class="row alumni-profile-overview-header align-items-center">
+                        <div class="col-10">
+                            <h2>Alumni Profile Overview</h2>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">A-Z</a></li>
+                                <li><a class="dropdown-item" href="#">Z-A</a></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3" id="alumnicardscontainer">
+                        
+                    </div>
                 </div>
-                <div class="sort">
-                    <p style="color:rgb(9, 9, 9)">Sort</p>
-                </div>
-                <div class="almunilist">
-                    <div><img src=".\rediimages\diana.png"/></div>
-                    <div><img src=".\rediimages\eleni.png"/></div>
-                    <div><img src=".\rediimages\guzide.png"/></div>
-                    <div><img src=".\rediimages\marcela.png"/></div>
-                    <div><img src=".\rediimages\monica.png"/></div>
-                    <div><img src=".\rediimages\noemi.png"/></div>
-                </div>
-            </div>   
-        </main>
+            </div>
+        </div>
         <footer class="footer">
                 <!-- contact part in the footer -->
                 <div class="footer-left">
@@ -76,5 +147,6 @@
                 <div class="footer-right"><p></p></div>
             </div>
         </footer>
+        <script src="overview.js"></script>
     </body>
 </html>
