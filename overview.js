@@ -3,13 +3,18 @@ var alumnis = [
     { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" },
     { name: "Güzide Güzelbey Esengün", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" },
     { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" },
-    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" }
-    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" }
+    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" },
+    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/linkedin.png" },
 ];
+
+// to get items in alumnis array from the local storage
+let string= JSON.string(alumnis);
+localStorage.getItem("alumnis", string);
+
 
 document.addEventListener("DOMContentLoaded", function () {
     RefreshPage();
-  });
+});
 
 function RefreshPage(){
     const cardContainer = document.getElementById("alumnicardscontainer");
@@ -98,8 +103,8 @@ function RefreshPage(){
     }
 }
 
+// sort alumni array
 function SortAZ(){
-    // sort alumni array
 
     RefreshPage();
 }
