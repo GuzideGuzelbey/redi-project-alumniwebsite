@@ -1,32 +1,41 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* Header navigation bar */
 
-nav {
+.navbar {
   background: #ffffff;
   height: 80px;
   width: 100%;
 }
+
 .navbar-brand {
   position: absolute;
   padding: 20px 50px;
 }
+
 .logo {
   height: 40px;
 }
-nav ul {
+
+.navbar ul {
   float: right;
   margin-right: 20px;
 }
-nav ul li {
+
+.navbar ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+
+.navbar ul li a {
   color: #000000;
   font-size: 16px;
   font-family: Avenir;
@@ -34,8 +43,9 @@ nav ul li a {
   border-radius: 3px;
   text-decoration: underline;
 }
-nav li a.active,
-nav li a:hover {
+
+.navbar li a.active,
+.navbar li a:hover {
   text-decoration: underline;
   transition: 0.5s;
   color: #6c6a6e;
@@ -50,6 +60,7 @@ nav li a:hover {
   cursor: pointer;
   display: none;
 }
+
 #check {
   display: none;
 }
@@ -58,7 +69,8 @@ nav li a:hover {
   .navbar-brand {
     padding-left: 20px;
   }
-  nav ul li a {
+
+  .navbar ul li a {
     font-size: 16px;
   }
 }
@@ -67,6 +79,7 @@ nav li a:hover {
   .checkbtn-navbar {
     display: block;
   }
+
   ul {
     position: fixed;
     width: 100%;
@@ -74,52 +87,97 @@ nav li a:hover {
     background-color: #2492b1;
     top: 80px;
     left: -100%;
-    text-align: center;
+    text-align: left;
     transition: all 0.5s;
+
   }
-  nav ul li {
+
+  .navbar ul li {
     display: block;
     margin: 50px 0px;
-    line-height: 10px;
+    line-height: 5px;
+    padding: 0px 40px;
   }
-  nav ul li a {
+
+  .navbar ul li a {
     font-size: 20px;
     color: #ffffff;
+    font-weight: 275;
     text-decoration: none;
+
   }
-  nav li a:hover,
-  nav li a.active {
+
+  .navbar li a:hover,
+  .navbar li a.active {
     background: none;
     color: #ffffff;
-    text-decoration: underline;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 200ms ease;
+
   }
-  #check:checked ~ ul {
+
+  #check:checked~ul {
     left: 0;
   }
 }
+
+/* English Language-icon' */
+.language-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.language-icon img {
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Media query for devices with a maximum screen width of 768px */
+@media only screen and (max-width: 858px) {
+
+  .language-icon {
+    display: none;
+  }
+}
+
 /* header banner  */
 
 .intro-banner {
-  background: linear-gradient(
-      to left,
-      rgba(0, 0, 144, 0.1),
-      rgba(95, 196, 239, 0.1)
-    ),
-    url("images/banner-intro.jpg") no-repeat;
+  background: url("images/banner-intro.jpg") no-repeat center center;
   background-size: cover;
   font-family: "Poppins";
-  background-position: center center;
-  height: calc(70vh - 80px);
+  height: calc(90vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .intro-banner .row h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: white;
   margin: 0 1.5rem;
+}
+
+/* Media query for devices with a maximum screen width of 768px (typical mobile device size) */
+@media only screen and (max-width: 768px) {
+  .intro-banner {
+    background-position-x: 70%;
+    height: calc(60vh - 80px);
+  }
+
+  .intro-banner .row h1 {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin: 0 1.5rem;
+  }
 }
 
 /* header banner - button  */
@@ -129,11 +187,11 @@ nav li a:hover {
   margin: 20px auto;
   color: #ffffff;
   background-color: #e96b1d;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Poppins";
   padding: 20px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: all 200ms ease;
   box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.08);
 }
@@ -141,4 +199,12 @@ nav li a:hover {
 .row-button:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .intro-banner .row-button {
+
+    font-size: 16px;
+
+  }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resource Style -->
+    <link rel="stylesheet" href="style-header.css" />
+    <link rel="stylesheet" href="style-addalumni.css" />
+    <!-- Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <script src="form_accordeon.js" defer=""></script>
+    <title>Alumni Website - ReDI School Aarhus</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Navigation Bar -->
+      <div class="navbar">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn-navbar">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a class="navbar-brand"
+          ><img src="images/ReDitalent_logo.png" alt="ReDi Talent" class="logo"
+        /></a>
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a class="active" href="#">Alumni Profiles</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Icon Language English -->
+      <div class="language-icon">
+        <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px" />
+      </div>
+    </header>
+    <div class="containerform">
+      <div id="titleaddprofile">
+        <p>Add Alumni Profile</p>
+      </div>
+      <div id="accordioncontainer">
+        <button class="accordionlist active">
+          Personal Details
+        </button>
+        <div class="panel" style="display: block">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Course Type</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Experience Level</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Portfolio & Projects</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Location</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Availability</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+        <button class="accordionlist">Type of Work</button>
+        <div class="panel">
+          <p>Add or Edit Personal Information</p>
+        </div>
+      </div>
+      <div id="formprofile">
+        <p>Boost your ReDi Talent with a personalized profile</p>
+        <div class="innerContainer">
+           <!-- Left side form -->
+          <form>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" />
+
+            <label for="secondName">Second Name:</label>
+            <input type="text" id="secondName" name="secondName" />
+
+            <label for="email">Email Contact:</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="aboutYou">About You:</label>
+            <textarea id="aboutYou" name="aboutYou"></textarea> 
+
+            </form>
+    </div>
+  </body>
+</html>
