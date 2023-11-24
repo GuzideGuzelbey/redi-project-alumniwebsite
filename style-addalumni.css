@@ -1,0 +1,207 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+}
+
+/* form container */
+
+.containerform {
+  background-color: #54ADC5;
+  flex-direction: row;
+  float: left;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  height: 800px;
+
+}
+
+/* Add Alumni title */
+
+#titleaddprofile {
+
+  background-color: #9FDAE9;
+  width: 100%;
+  height: 70px;
+  flex-direction: row;
+  float: center;
+  box-sizing: border-box;
+  padding: 18px;
+  font-size: 25px;
+  color: #777b87;
+
+}
+
+/* lef Accordion */
+
+#accordioncontainer {
+  box-sizing: border-box;
+  background-color: #E9E8E8;
+  width: 20%;
+  height: 800px;
+  float: left;
+  display: block;
+}
+
+
+/* lef Accordion list */
+
+.accordionlist {
+  background-color: #5E616A;
+  height: 60px;
+  color: #D9D9D9D4;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  padding: 15px;
+}
+
+.accordionlist .active,
+.accordionlist:hover {
+  background-color: #777b87;
+  color: #D9D9D9D4;
+}
+
+
+/* Add Icons accordion */
+
+.accordionlist:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 11px;
+
+  float: right;
+  margin-left: 5px;
+
+}
+
+.accordionlist.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 0px;
+  background-color: #E9E8E8;
+  font-size: 12px;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  padding: 5px 20px 2px;
+
+}
+
+
+/* right form  */
+
+#formprofile {
+  background-color: #2F8BA4;
+  text-align: center;
+  color: #ffff;
+  padding-top: 20px;
+  width: 80%;
+  height: 500px;
+  float: right;
+  box-sizing: border-box;
+  height: 800px;
+
+}
+
+
+.innerContainer {
+
+  background-color: #D9D9D9;
+  color: #5E616A;
+  height: 619px;
+  border-radius: 7px;
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  /* Centrar el contenedor interno */
+  overflow: hidden;
+  /* Evitar desbordamiento de contenido */
+  text-align: left;
+  /* Alinear el texto a la izquierda */
+  display: block;
+}
+
+
+.formprofileleft {
+  width: 50%;
+  float: left;
+  padding: 20px;
+
+}
+
+
+.formprofileright {
+  width: 40%;
+  float: right;
+  padding: 20px;
+
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #2F8BA4;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#photoContainer {
+  float: right;
+  margin-top: 20px;
+}
+
+#skillsContainer {
+  margin-top: 20px;
+  /* Ancho ajustado para hacerlo más pequeño */
+}
+
+#addSkillsButton {
+  background-color: #2F8BA4;
+  font-size: 8px;
+  width: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#imagePreview {
+  max-width: 379px;
+  max-height: 347px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
