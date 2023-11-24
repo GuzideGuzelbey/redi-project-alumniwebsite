@@ -7,6 +7,10 @@ var alumnis = [
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
+    RefreshPage();
+  });
+
+function RefreshPage(){
     const cardContainer = document.getElementById("alumnicardscontainer");
   
     var cardIndex = 0;
@@ -87,9 +91,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 else{
                     col3.appendChild(card);
                 }
-
             }
         }
         cardIndex+=3;
     }
-  });
+}
+
+function SortAZ(){
+    // sort alumni array
+
+    RefreshPage();
+}
+
+function SortZA(){
+    
+    RefreshPage();
+}
+
