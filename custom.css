@@ -1,3 +1,31 @@
+.col-3, .accordion-flush, .accordion-button{
+    background-color: #2492B1;
+}
+.row{
+    display: flex;
+}
+
+.col-3{
+ 
+}
+
+.col-10 h2{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
 .accordion-header{
+    color: #FFFFFF;
+}
+
+.accordion-item, .accordion-body, .accordion{
+    background-color: #2492B1;
+}
+.collapseOne{
+    background-color: #2492B1;
+}
+
+.accordion .accordion-item{
     background-color: #2492B1;
 }
