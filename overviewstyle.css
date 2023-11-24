@@ -8,6 +8,9 @@ body {
 .alumni-profile-overview-header{
   background-color: #9FDAE9D9;
 }
+.accordion-button{
+  background-color: #2492B1;
+}
 
 .btn.btn-social-icon{
   width: 20px;
