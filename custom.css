@@ -13,12 +13,21 @@
     font-weight: 100px;
 }
 
-.accordion-collapse{
+.accordion-collapse > .accordion-body{
     max-width: 100%;
+    background-color: #2492B1;
 }
 
 .card{
     background-color:#EBE9E9;
+}
+
+.redi{
+    color:#EA5B25;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 16px;
 }
 
 .col-10 h2{

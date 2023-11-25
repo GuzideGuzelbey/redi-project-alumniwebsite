@@ -63,12 +63,12 @@ function RefreshPage(){
                 course.textContent = alumnis[j].course;
 
                 const portfolioLink = document.createElement("a");
-                portfolioLink.classList.add("btn", "btn-primary");
+                portfolioLink.classList.add("btn", "btn-secondary");
                 portfolioLink.href = alumnis[j].portfolioLink;
                 portfolioLink.textContent = "Portfolio";
 
                 const reditext = document.createElement("p");
-                reditext.className = "card-text";
+                reditext.classList.add("card-text", "redi");
                 reditext.textContent = "ReDi to Work";
 
                 const linkedinUrl = document.createElement("img");
@@ -77,7 +77,7 @@ function RefreshPage(){
                 linkedinUrl.alt = "linkedin";
 
                 const email = document.createElement("img");
-                email.classList.add("btn", "btn-social-icon");
+                email.classList.add("btn", "btn-link");
                 email.src = alumnis[j].email;
                 email.alt = "email";
 
