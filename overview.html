@@ -41,27 +41,28 @@
               <button class="row-button">Add Alumni</button>
             </div>
         </header>
-        <div class="container">
-            <div class="row" style="margin-right: calc(-.5 * var(--bs-gutter-x));;">
+        <div class="container" style="padding-right: calc(var(--bs-gutter-x) * .0);
+        padding-left: calc(var(--bs-gutter-x) * .0);">
+            <div class="row">
                 <div class="col-3">
                     <div class="accordion accordion-flush" id="filter" style="color: white;">
                         <div class="filterhead" style="display: block;"><img src=./rediimages/filtericon.png style="float: left;"><h2 class="filtertype" style="word-wrap: break-word; font-size: 22px; font-family: Poppins; font-weight: 200; float: left;margin-left: 4%; margin-top: 4%;">Filter</h2></div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                               Course Type
                             </button>
                           </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#filter">
-                            <div class="accordion-body" style="font-size: 14px; color: white">
+                          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body" style="font-size: 13px; color: white">
                                 <div class="accordion" id="courseTypeFilter">
                                     <div class="accordion-item">
                                       <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton" aria-expanded="true" aria-controls="courseTypeFilterButton">
+                                        <button style="font-size: 14px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton" aria-expanded="false" aria-controls="courseTypeFilterButton">
                                             UX/UI Design
                                         </button>
                                       </h2>
-                                      <div id="courseTypeFilterButton" class="accordion-collapse collapse show" data-bs-parent="#courseTypeFilter">
+                                      <div id="courseTypeFilterButton" class="accordion-collapse collapse" data-bs-parent="#courseTypeFilter">
                                         <div class="accordion-body">
                                             <ul class="list-group">
                                                 <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
@@ -74,77 +75,208 @@
                                                 </li>
                                                 <li class="list-group-item border-0" style="color: #2492B1;">
                                                   <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                                                  <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                                                  <label class="form-check-label" for="thirdCheckbox">Prototyping</label>
+                                                </li>
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">Wireframing</label>
+                                                </li>
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">Interaction Design</label>
+                                                </li>
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">Visual Design</label>
+                                                </li>
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">Usability Testing</label>
+                                                </li>
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                  <label class="form-check-label" for="firstCheckbox">Adobe Creative suite</label>
                                                 </li>
                                             </ul>
                                         </div>
                                       </div>
                                     </div>
                                 </div>
+                                <div class="accordion" id="courseTypeFilter2">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button style="font-size: 14px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton2" aria-expanded="false" aria-controls="courseTypeFilterButton2">
+                                          Javascript
+                                      </button>
+                                    </h2>
+                                    <div id="courseTypeFilterButton2" class="accordion-collapse collapse" data-bs-parent="#courseTypeFilter">
+                                      <div class="accordion-body">
+                                          <ul class="list-group">
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">User Experience Design</label>
+                                              </li>
+                                              <li class="list-group-item border-0" style="color:  #2492B1;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                                <label class="form-check-label" for="secondCheckbox">User Interface Design</label>
+                                              </li>
+                                              <li class="list-group-item border-0" style="color: #2492B1;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                                <label class="form-check-label" for="thirdCheckbox">Prototyping</label>
+                                              </li>
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">Wireframing</label>
+                                              </li>
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">Interaction Design</label>
+                                              </li>
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">Visual Design</label>
+                                              </li>
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">Usability Testing</label>
+                                              </li>
+                                              <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                                <label class="form-check-label" for="firstCheckbox">Adobe Creative suite</label>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton3" aria-expanded="false" aria-controls="courseTypeFilterButton3">
                                 Experience Level
                             </button>
                           </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#filter">
+                          <div id="courseTypeFilterButton3" class="accordion-collapse collapse" data-bs-parent="#filter">
                             <div class="accordion-body">
-                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Junior (0-3 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color:  #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Mid-level (4-6 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color: #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Senior (7+ years)</label>
+                                    </li>
+                                </ul>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Projects & Portfolio
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton4" aria-expanded="false" aria-controls="courseTypeFilterButton4">
+                                Experience Level1
                             </button>
                           </h2>
-                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filter">
+                          <div id="courseTypeFilterButton4" class="accordion-collapse collapse" data-bs-parent="#filter">
                             <div class="accordion-body">
-                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Junior (0-3 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color:  #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Mid-level (4-6 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color: #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Senior (7+ years)</label>
+                                    </li>
+                                </ul>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Location
-                              </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filter">
-                              <div class="accordion-body">
-                                <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton5" aria-expanded="false" aria-controls="courseTypeFilterButton5">
+                                Experience Level2
+                            </button>
+                          </h2>
+                          <div id="courseTypeFilterButton5" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Junior (0-3 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color:  #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Mid-level (4-6 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color: #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Senior (7+ years)</label>
+                                    </li>
+                                </ul>
                             </div>
+                          </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Availability & Start Date
-                              </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filter">
-                              <div class="accordion-body">
-                                <strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton6" aria-expanded="false" aria-controls="courseTypeFilterButton6">
+                                Experience Level3
+                            </button>
+                          </h2>
+                          <div id="courseTypeFilterButton6" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Junior (0-3 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color:  #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Mid-level (4-6 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color: #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Senior (7+ years)</label>
+                                    </li>
+                                </ul>
                             </div>
+                          </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Type of Work
-                              </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#filter">
-                              <div class="accordion-body">
-                                <strong>This is the sixth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
+                          <h2 class="accordion-header" style="font-size: 16px; font-weight: 400;">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#courseTypeFilterButton7" aria-expanded="false" aria-controls="courseTypeFilterButton7">
+                                Experience Level5
+                            </button>
+                          </h2>
+                          <div id="courseTypeFilterButton7" class="accordion-collapse collapse" data-bs-parent="#filter">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Junior (0-3 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color:  #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Mid-level (4-6 years)</label>
+                                    </li>
+                                    <li class="list-group-item border-0" style="color: #2492B1;">
+                                      <input class="form-check-input me-1" type="radio" value="" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Senior (7+ years)</label>
+                                    </li>
+                                </ul>
                             </div>
+                          </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-9">
