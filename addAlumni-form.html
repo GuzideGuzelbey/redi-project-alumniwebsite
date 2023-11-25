@@ -17,7 +17,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
     />
-    <script src="form_accordeon.js" defer=""></script>
     <title>Alumni Website - ReDI School Aarhus</title>
   </head>
   <body>
@@ -43,60 +42,119 @@
         <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px" />
       </div>
     </header>
-    <div class="containerform">
-      <div id="titleaddprofile">
-        <p>Add Alumni Profile</p>
+    <!-- Main container Form -->
+    <div class="container-form">
+      <div class="container-form-title">Add Alumni Profile</div>
+      <!-- Inner container Form -->
+      <div class=".inner-containerform">
+        <div class="inner-left">
+          <!-- InnerContainer left -->
+
+          <button class="accordionForm">Personal Details</button>
+          <div class="panel">
+            <p>Add or Edit Personal Information</p>
+          </div>
+
+          <button class="accordionForm">Course Type</button>
+          <div class="panel">
+            <input
+              type="radio"
+              id="course_Cybersecurity"
+              name="courseType"
+              value="Cybersecurity"
+            />
+            <label for="course_Cybersecurity">Cybersecurity</label><br />
+            <input
+              type="radio"
+              id="course_uxuiDesign"
+              name="courseType"
+              value="uxuiDesign"
+            />
+            <label for="course_uxuiDesign">UX / UI Design</label><br />
+            <input
+              type="radio"
+              id="course_Javascript"
+              name="courseType"
+              value="JavaScript"
+            />
+            <label for="course_Javascript">JavaScript</label><br />
+            <input
+              type="radio"
+              id="course_Python"
+              name="courseType"
+              value="Python"
+            />
+            <label for="course_Python">Python</label><br />
+            <input
+              type="radio"
+              id="course_DataAnalytics"
+              name="courseType"
+              value="DataAnalytics"
+            />
+            <label for="course_DataAnalytics">Data Analytics</label><br />
+            <input
+              type="radio"
+              id="course_MachineLearning"
+              name="courseType"
+              value="MachineLearning"
+            />
+            <label for="course_MachineLearning">Machine Learning</label><br />
+            <input
+              type="radio"
+              id="course_AI"
+              name="courseType"
+              value="ArtificialIntelligence"
+            />
+            <label for="course_AI">AI Artificial Intelligence</label><br />
+          </div>
+
+          <button class="accordionForm">Experience Level</button>
+          <div class="panel">
+            <input
+              type="radio"
+              id="experience_Junior"
+              name="experience_Level"
+              value="Junior-level"
+            />
+            <label for="experience_Junior">Junior (0-3 years)</label><br />
+            <input
+              type="radio"
+              id="experience_Mid-level"
+              name="experience_Level"
+              value="Mid-level"
+            />
+            <label for="experience_Mid-level">Mid-level (4-6 years)</label
+            ><br />
+            <input
+              type="radio"
+              id="experience_Senior"
+              name="experience_Level"
+              value="Senior-level"
+            />
+            <label for="experience_Senior">Senior (7+ years)</label><br />
+          </div>
+        </div>
+        <div class="inner-right">
+          <!-- InnerContainer right -->
+          <p>Boost your ReDi Talent with a personalized profile</p>
+        </div>
       </div>
-      <div id="accordioncontainer">
-        <button class="accordionlist active">
-          Personal Details
-        </button>
-        <div class="panel" style="display: block">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Course Type</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Experience Level</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Portfolio & Projects</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Location</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Availability</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-        <button class="accordionlist">Type of Work</button>
-        <div class="panel">
-          <p>Add or Edit Personal Information</p>
-        </div>
-      </div>
-      <div id="formprofile">
-        <p>Boost your ReDi Talent with a personalized profile</p>
-        <div class="innerContainer">
-           <!-- Left side form -->
-          <form>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" />
-
-            <label for="secondName">Second Name:</label>
-            <input type="text" id="secondName" name="secondName" />
-
-            <label for="email">Email Contact:</label>
-            <input type="email" id="email" name="email" />
-
-            <label for="aboutYou">About You:</label>
-            <textarea id="aboutYou" name="aboutYou"></textarea> 
-
-            </form>
     </div>
+    <script>
+      var acc = document.getElementsByClassName("accordionForm");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
