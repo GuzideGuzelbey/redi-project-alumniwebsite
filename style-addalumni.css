@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-/* INNER container form */
+/* MAIN container form */
 
 .container-form {
   background-color: #54ADC5;
@@ -86,7 +86,7 @@ body {
   line-height: 30px;
 }
 
-
+/* RIGHT INNER container form */
 .inner-right {
 
   background-color: #2F8BA4;
@@ -105,7 +105,7 @@ body {
   .inner-left,
   .inner-right {
     width: 100%;
-    /* The width is 100%, when the viewport is 834px or smaller */
+    /* The width is 100%, when the viewport is 952px or smaller */
   }
 
   .inner-left {
