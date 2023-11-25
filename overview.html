@@ -23,8 +23,7 @@
                 <i class="fas fa-bars"></i>
               </label>
               <a class="navbar-brand"
-                ><img src="images/ReDitalent_logo.png" alt="ReDi Talent" class="logo"
-              /></a>
+                ><img src="images/ReDitalent_logo.png" alt="ReDi Talent" class="logo"/></a>
               <ul class="nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a class="active" href="#">Alumni Profiles</a></li>
@@ -34,18 +33,19 @@
             </div>
             <!-- Icon Language English -->
             <div class="language-icon">
-              <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px" />
+              <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px"/>
             </div>
             <!-- Banner image and Button Explorer profiles -->
             <div class="intro-banner">
               <div class="row"><h1>Discover ReDi Alumni Profiles</h1></div>
               <button class="row-button">Add Alumni</button>
             </div>
-          </header>
+        </header>
         <div class="container">
-            <div class="row">
+            <div class="row" style="margin-right: calc(-.5 * var(--bs-gutter-x));;">
                 <div class="col-3">
-                    <div class="accordion accordion-flush" id="filter">
+                    <div class="accordion accordion-flush" id="filter" style="color: white;">
+                        <div class="filterhead" style="display: block;"><img src=./rediimages/filtericon.png style="float: left;"><h2 class="filtertype" style="word-wrap: break-word; font-size: 22px; font-family: Poppins; font-weight: 200; float: left;margin-left: 4%; margin-top: 4%;">Filter</h2></div>
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -53,7 +53,7 @@
                             </button>
                           </h2>
                           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#filter">
-                            <div class="accordion-body">
+                            <div class="accordion-body" style="font-size: 14px; color: white">
                                 <div class="accordion" id="courseTypeFilter">
                                     <div class="accordion-item">
                                       <h2 class="accordion-header">
@@ -64,15 +64,15 @@
                                       <div id="courseTypeFilterButton" class="accordion-collapse collapse show" data-bs-parent="#courseTypeFilter">
                                         <div class="accordion-body">
                                             <ul class="list-group">
-                                                <li class="list-group-item border-0">
+                                                <li class="list-group-item border-0"  style="color: #2492B1; font-weight: 400;">
                                                   <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
                                                   <label class="form-check-label" for="firstCheckbox">User Experience Design</label>
                                                 </li>
-                                                <li class="list-group-item border-0">
+                                                <li class="list-group-item border-0" style="color:  #2492B1;">
                                                   <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
                                                   <label class="form-check-label" for="secondCheckbox">User Interface Design</label>
                                                 </li>
-                                                <li class="list-group-item border-0">
+                                                <li class="list-group-item border-0" style="color: #2492B1;">
                                                   <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
                                                   <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
                                                 </li>
@@ -148,13 +148,13 @@
                     </div>
                 </div>
                 <div class="col-9">
-                    <div class="row alumni-profile-overview-header align-items-center">
-                        <div class="col-10">
-                            <h2>Alumni Profile Overview</h2>
+                    <div class="row alumni-profile-overview-header align-items-center" style="height: 5%;">
+                        <div class="col-10" style="max-width: 100%; margin-top: 5px;">
+                            <h2 style="font-size: 22px; color: #3F3F40; font-weight: 900; margin-left: 5%;">Alumni Profile Overview</h2>
                         </div>
                         <div class="col-2">
-                            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sort
+                            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: black; font-size:26px; font-weight: 500; float: right; margin-right: 20%;">
+                                A-Z
                               </button>
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#"  onclick="SortAZ();">A-Z</a></li>
@@ -162,7 +162,7 @@
                               </ul>
                         </div>
                     </div>
-                    <div class="row mt-3" id="alumnicardscontainer">
+                    <div class="row mt-3" id="alumnicardscontainer" style="justify-content: center; scale: 0.95; padding-left: 10px;">
                         
                     </div>
                 </div>
