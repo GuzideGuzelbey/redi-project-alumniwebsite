@@ -52,7 +52,9 @@
 
           <button class="accordionForm">Personal Details</button>
           <div class="panel">
-            <p>Add or Edit Personal Information</p>
+            <a href="#form-center-container" id="enlace-form-center-container"
+              >Add or Edit Personal Information</a
+            >
           </div>
 
           <button class="accordionForm">Course Type</button>
@@ -133,10 +135,154 @@
             />
             <label for="experience_Senior">Senior (7+ years)</label><br />
           </div>
+
+          <button class="accordionForm">Portfolio & Projects</button>
+          <div class="panel">
+            <p>· Projects</p>
+            <p>· Portfolio</p>
+          </div>
+          <button class="accordionForm">Location</button>
+          <div class="panel">
+            <input
+              type="radio"
+              id="location_Aarhus"
+              name="location"
+              value="Aarhus-location"
+            />
+            <label for="location_Aarhus">Aarhus</label><br />
+            <input
+              type="radio"
+              id="location_Copenhagen"
+              name="location"
+              value="Copenhagen-location"
+            />
+            <label for="location_Copenhagen">Copenhagen</label><br />
+            <input
+              type="radio"
+              id="location_Remoto"
+              name="location"
+              value="Remoto-location"
+            />
+            <label for="location_Remoto">Remoto</label>
+          </div>
+          <button class="accordionForm">Availability</button>
+          <div class="panel">
+            <input
+              type="radio"
+              id="availability_Looking"
+              name="availability"
+              value="Availability-Looking"
+            />
+            <label for="availability_Looking">Looking for jobs now</label><br />
+            <input
+              type="radio"
+              id="availability_Not"
+              name="availability"
+              value="Availability-NotLooking"
+            />
+            <label for="availability_Not">Not looking for job</label>
+          </div>
+          <button class="accordionForm">Type of Work</button>
+          <div class="panel">
+            <input
+              type="radio"
+              id="work_Fulltime"
+              name="TypeofWork"
+              value="work-Fulltime"
+            />
+            <label for="work_Fulltime">Full-time</label><br />
+            <input
+              type="radio"
+              id="work_Parttime"
+              name="TypeofWork"
+              value="work-Parttime"
+            />
+            <label for="work_Parttime">Part-time</label><br />
+
+            <input
+              type="radio"
+              id="work_Student"
+              name="TypeofWork"
+              value="work-Student"
+            />
+            <label for="work_Student">Student Job</label><br />
+
+            <input
+              type="radio"
+              id="work_Intership"
+              name="TypeofWork"
+              value="work-Intership"
+            />
+            <label for="work_Intership">Intership</label><br />
+          </div>
         </div>
         <div class="inner-right">
           <!-- InnerContainer right -->
           <p>Boost your ReDi Talent with a personalized profile</p>
+          <div id="form-center-container">
+            <div class="form-center-container1list">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br />
+
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required />
+
+              <label for="email-contact">Email Contact:</label>
+              <input
+                type="text"
+                id="email-contact"
+                name="email-contact"
+                required
+              />
+
+              <label for="about-you">About You:</label>
+              <textarea id="about-you" name="about-you"></textarea>
+
+              <label for="resume">Upload Resume:</label>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+              />
+
+              <label for="linkedin" class="linkedin-label">
+                <img
+                  src="images/linkedin_form.png"
+                  alt="LinkedIn Icon"
+                  class="linkedin-icon-form"
+                />
+                LinkedIn URL:
+              </label>
+              <input type="url" id="linkedin" name="linkedin" />
+            </div>
+            <div class="form-center-container2list">
+              <div class="avatar-form">
+                <label for="upload-photo" id="avatar-label">
+                  <img src="images/avatar-form.jpg" alt="avatar-form" />
+                </label>
+                <input
+                  type="file"
+                  id="upload-photo"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+              <div class="skills-form">
+                <label for="skills"></label>
+                <input
+                  id="skills"
+                  name="skills"
+                  placeholder="* Top Skills"
+                  required
+                />
+              </div>
+              <!-- Botón Save and Continue -->
+              <button type="button" id="saveAndContinueBtn">
+                Save and Continue
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

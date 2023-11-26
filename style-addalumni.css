@@ -3,12 +3,13 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+
 }
 
 /* MAIN container form */
 
 .container-form {
-  background-color: #54ADC5;
+  background-color: #E9E8E8;
   font-family: 'Poppins';
   width: 100%;
 
@@ -20,7 +21,7 @@ body {
   background-color: #9FDAE9;
   width: 100%;
   padding: 15px;
-  padding-left: 50px;
+  padding-left: 40px;
   font-size: 25px;
   color: #777b87;
 }
@@ -47,10 +48,11 @@ body {
 }
 
 .accordionForm {
-  background-color: #777;
+  background-color: #5E616A;
   color: #dedede;
   cursor: pointer;
-  padding: 15px;
+  padding: 20px;
+  padding-left: 40px;
   width: 100%;
   text-align: left;
   border: none;
@@ -60,7 +62,7 @@ body {
 
 .accordionForm.active,
 .accordionForm:hover {
-  background-color: #a0a0a0;
+  background-color: #777b87;
 }
 
 .accordionForm:after {
@@ -78,13 +80,28 @@ body {
 
 .panel {
   font-size: 13px;
-  padding: 0 18px;
+  padding: 0px 18px 0px 40px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  line-height: 30px;
+  line-height: 28px;
+  color: #575757;
 }
+
+
+.panel a {
+  color: #575757;
+
+  text-decoration: none;
+
+}
+
+.panel a:hover {
+  text-decoration: underline;
+
+}
+
 
 /* RIGHT INNER container form */
 .inner-right {
@@ -96,19 +113,178 @@ body {
   width: 80%;
   float: right;
   box-sizing: border-box;
+  padding-bottom: 80px;
+
 
 }
 
+#form-center-container {
+
+  width: 70%;
+  background-color: #D9D9D9;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+
+
+
+}
+
+#form-center-container .inner-containers-forms {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.form-center-container1list,
+.form-center-container2list {
+  width: 48%;
+  /* Cambia según tus necesidades y considera el espacio entre ambos */
+  box-sizing: border-box;
+}
+
+
+
+
+.form-center-container1list {
+
+  background-color: #D9D9D9;
+  color: #0b132a;
+  float: left;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 25px;
+  margin-bottom: 40px;
+
+
+
+}
+
+.form-center-container1list label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-center-container1list input,
+.form-center-container1list textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+
+.form-center-container2list label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+
+.linkedin-icon-form {
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+
+}
+
+
+.form-center-container2list {
+
+
+  background-color: #D9D9D9;
+  float: right;
+  align-items: left;
+  padding-left: 40px;
+  padding-top: 80px;
+  text-align: right;
+
+
+
+
+}
+
+
+.avatar-form {
+  width: 285px;
+  height: 285px;
+  background-color: #ffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+
+
+
+}
+
+.avatar-form img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#upload-photo {
+  display: none;
+
+}
+
+#avatar-label {
+  cursor: pointer;
+
+}
+
+
+#avatar-label:hover {
+
+  background-color: #ddd;
+}
+
+
+
+.skills-form {
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  padding-top: 20px;
+
+}
+
+
+
+#saveAndContinueBtn {
+  background-color: #EA5B25;
+  color: white;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  margin-right: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#saveAndContinueBtn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 952px) {
 
   .inner-left,
   .inner-right {
     width: 100%;
+    height: auto;
+    margin-bottom: 0px;
     /* The width is 100%, when the viewport is 952px or smaller */
   }
 
   .inner-left {
     align-items: center;
   }
+
 }
