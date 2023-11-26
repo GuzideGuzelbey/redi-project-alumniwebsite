@@ -1,25 +1,55 @@
 var alumnis = [
     { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
-    courseinfo: ["JavaScript", "User Interface Design", "Visual Design", "React.js"], experience: ["Junior (0-3 years)"], projects: ["Projects", "Portfolio"], locationofwork: ["Aarhus"], 
-    availability: ["Available now"], typeofwork: ["Part-time", "Student Job", "Internship"] },
+    detailedinfo: ["JavaScript", "User Interface Design", "Visual Design", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
     { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
-    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping"], experience: ["Mid-level (4-6 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
-    availability: ["Available now"], typeofwork: ["Part-time", "Full-time"] },
+    detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Mid-level (4-6 years)", "Portfolio", "Aarhus", "Remote", 
+     "Available now","Part-time", "Full-time"] },
     { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
-    courseinfo: ["JavaScript", "Node.js", "React.js"], experience: ["Junior (0-3 years)"], projects: ["Projects"], locationofwork: ["Aarhus", "Copenhagen"], 
-    availability: ["Available now"], typeofwork: ["Full-time", "Student Job", "Internship"] },
+    detailedinfo: ["JavaScript", "Node.js", "React.js", "Junior (0-3 years)", "Projects", "Aarhus", "Copenhagen", "Available now","Full-time", "Student Job", "Internship"] },
     { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
-    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing"], experience: ["Junior (0-3 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
-    availability: ["Available now"], typeofwork: ["Part-time", "Full-time", "Student Job", "Internship"] },
+    detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing", "Junior (0-3 years)", "Portfolio", "Aarhus", "Remote", 
+    "Available now", "Part-time", "Full-time", "Student Job", "Internship"] },
     { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
-    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing"], experience: ["Junior (0-3 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
-    availability: ["Available now"], typeofwork: ["Part-time", "Full-time", "Student Job", "Internship"] },
+    detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing",  "Junior (0-3 years)", "Portfolio", "Aarhus", "Remote", 
+     "Available now","Part-time", "Full-time", "Student Job", "Internship"] },
     { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
-    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping"], experience: ["Mid-level (4-6 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
-    availability: ["Available now"], typeofwork: ["Part-time", "Full-time"]  },
+    detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Available now", "Mid-level (4-6 years)", "Portfolio","Aarhus", "Remote", "Part-time", "Full-time"] },
 ];
 
 
+
+  var activeFilters = [];
+
+  function courseInfoFilter(type){
+    RemoveAllCards();
+    var filteredalumnis = [];
+
+    if(activeFilters.includes(type.innerHTML)){
+        activeFilters = activeFilters.splice(activeFilters.indexOf(type.innerHTML), type.innerHTML);
+    }
+    else{
+        activeFilters.push(type.innerHTML);
+    }
+
+    if(activeFilters.length == 0){
+        RefreshPage(alumnis);
+        return;
+    }
+    
+
+    for(var i = 0; i < activeFilters.length; i++){
+        for(var j = 0; j < alumnis.length; j++){
+            if(alumnis[j].detailedinfo.includes(activeFilters[i])){
+                filteredalumnis.push(alumnis[j]);
+            }
+        }        
+    }
+    
+    RefreshPage(filteredalumnis);
+  }
+  
+  
+/*------------------------- SORT ------------------------ */
 //compare alumnis name field A to Z
 function compareAZ(a, b) {
     return a.name.localeCompare(b.name);
@@ -29,7 +59,7 @@ function compareAZ(a, b) {
 function SortAZ(){
     RemoveAllCards();
     alumnis.sort(compareAZ);
-    RefreshPage();
+    RefreshPage(alumnis);
 }
 
 //compare alumnis name field Z to A
@@ -41,7 +71,7 @@ function compareZA(a, b) {
 function SortZA(){
     RemoveAllCards();
     alumnis.sort(compareZA); /*sorts alumnis*/
-    RefreshPage();
+    RefreshPage(alumnis);
 }
 
 // deletes existing cards in alumniscardcontainer div for the last condition 
@@ -55,8 +85,6 @@ function RemoveAllCards(){
     } 
 }
 
-//arrays to be used for filtering
-
 
 // to get items in alumnis array from the local storage
 //alumnis = localStorage.getItem("alumnis"); add after
@@ -64,10 +92,10 @@ function RemoveAllCards(){
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    RefreshPage();
+    RefreshPage(alumnis);
 });
 
-function RefreshPage(){
+function RefreshPage(alumnis){
     const cardContainer = document.getElementById("alumnicardscontainer");
     var cardIndex = 0;
     var numberofRows = Math.ceil(alumnis.length / 3);
