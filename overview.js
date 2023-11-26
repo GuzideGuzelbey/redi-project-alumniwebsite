@@ -1,4 +1,4 @@
-var alumnis = [
+let alumnis = [
     { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
     detailedinfo: ["Javascript Basic", "User Interface Design", "Visual Design", "Angular", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
     { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
@@ -18,11 +18,11 @@ var alumnis = [
 
 
 
-  var activeFilters = [];
+  let activeFilters = [];
 
   function courseInfoFilter(type){
     RemoveAllCards();
-    var filteredalumnis = [];
+    let filteredalumnis = [];
 
     if(activeFilters.includes(type.innerHTML)){
         activeFilters = activeFilters.filter(function (filter) {
@@ -38,14 +38,22 @@ var alumnis = [
         return;
     }
     
+// filtering with intersection of more than one option
 
-    for(var i = 0; i < activeFilters.length; i++){
-        for(var j = 0; j < alumnis.length; j++){
-            if(alumnis[j].detailedinfo.includes(activeFilters[i]) && !filteredalumnis.includes(alumnis[j])){
-                filteredalumnis.push(alumnis[j]);
+    for(let i = 0; i < alumnis.length; i++){
+        var isAllExist = true;
+        for(let j = 0; j < activeFilters.length; j++){
+            if(!alumnis[i].detailedinfo.includes(activeFilters[j])){
+                isAllExist = false;
+                break;
             }
-        }        
+        }   
+        if(isAllExist){
+            filteredalumnis.push(alumnis[i]);
+        }     
     }
+
+    
     
     RefreshPage(filteredalumnis);
   }
@@ -80,7 +88,7 @@ function SortZA(){
 
 function RemoveAllCards(){
     const cardContainer = document.getElementById("alumnicardscontainer");
-    var child = cardContainer.lastElementChild;  
+    let child = cardContainer.lastElementChild;  
     while (child) { 
         cardContainer.removeChild(child); 
         child = cardContainer.lastElementChild; 
@@ -89,8 +97,8 @@ function RemoveAllCards(){
 
 
 // to get items in alumnis array from the local storage
-//alumnis = localStorage.getItem("alumnis"); add after
-// Marcela finishes her js code and you have to do more things
+//alumnis = localStorage.getItem("alumnis"); 
+// add after Marcela finishes her js code and you have to do more things
 
 
 document.addEventListener("DOMContentLoaded", function () {
