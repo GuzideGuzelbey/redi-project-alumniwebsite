@@ -1,17 +1,51 @@
 var alumnis = [
-    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
+    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
     { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
     { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
+    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
     { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
     { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
 ];
 
+//compare alumnis name field A to Z
+function compareAZ(a, b) {
+    return a.name.localeCompare(b.name);
+  }
+
+
+function SortAZ(){
+    RemoveAllCards();
+    alumnis.sort(compareAZ);
+    RefreshPage();
+}
+
+//compare alumnis name field Z to A
+
+function compareZA(a, b) {
+    return b.name.localeCompare(a.name);
+}
+
+function SortZA(){
+    RemoveAllCards();
+    alumnis.sort(compareZA); /*sorts alumnis*/
+    RefreshPage();
+}
+
+// deletes existing cards in alumniscardcontainer div for the last condition 
+
+function RemoveAllCards(){
+    const cardContainer = document.getElementById("alumnicardscontainer");
+    var child = cardContainer.lastElementChild;  
+    while (child) { 
+        cardContainer.removeChild(child); 
+        child = cardContainer.lastElementChild; 
+    } 
+}
+
 
 // to get items in alumnis array from the local storage
-//alumnis = localStorage.getItem("alumnis");
-
-
+//alumnis = localStorage.getItem("alumnis"); add after
+// Marcela finishes her js code and you have to do more things
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function RefreshPage(){
     const cardContainer = document.getElementById("alumnicardscontainer");
-  
     var cardIndex = 0;
     var numberofRows = Math.ceil(alumnis.length / 3);
     // Loop through the array and create cards
@@ -105,14 +138,5 @@ function RefreshPage(){
     }
 }
 
-// sort alumni array
-function SortAZ(){
 
-    RefreshPage();
-}
-
-function SortZA(){
-    
-    RefreshPage();
-}
 
