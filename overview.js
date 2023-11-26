@@ -1,11 +1,11 @@
 var alumnis = [
     { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
-    detailedinfo: ["JavaScript", "User Interface Design", "Visual Design", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
+    detailedinfo: ["Javascript Basic", "User Interface Design", "Visual Design", "Angular", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
     { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Mid-level (4-6 years)", "Portfolio", "Aarhus", "Remote", 
      "Available now","Part-time", "Full-time"] },
     { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
-    detailedinfo: ["JavaScript", "Node.js", "React.js", "Junior (0-3 years)", "Projects", "Aarhus", "Copenhagen", "Available now","Full-time", "Student Job", "Internship"] },
+    detailedinfo: ["Javascript Basic", "Node.js", "React.js", "Junior (0-3 years)", "Projects", "Aarhus", "Copenhagen", "Available now","Full-time", "Student Job", "Internship"] },
     { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing", "Junior (0-3 years)", "Portfolio", "Aarhus", "Remote", 
     "Available now", "Part-time", "Full-time", "Student Job", "Internship"] },
@@ -25,7 +25,9 @@ var alumnis = [
     var filteredalumnis = [];
 
     if(activeFilters.includes(type.innerHTML)){
-        activeFilters = activeFilters.splice(activeFilters.indexOf(type.innerHTML), type.innerHTML);
+        activeFilters = activeFilters.filter(function (filter) {
+            return filter !== type.innerHTML;
+        });
     }
     else{
         activeFilters.push(type.innerHTML);
@@ -39,7 +41,7 @@ var alumnis = [
 
     for(var i = 0; i < activeFilters.length; i++){
         for(var j = 0; j < alumnis.length; j++){
-            if(alumnis[j].detailedinfo.includes(activeFilters[i])){
+            if(alumnis[j].detailedinfo.includes(activeFilters[i]) && !filteredalumnis.includes(alumnis[j])){
                 filteredalumnis.push(alumnis[j]);
             }
         }        
