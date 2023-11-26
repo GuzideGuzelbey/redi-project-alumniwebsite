@@ -58,12 +58,10 @@ alumniArray.push(newAlumni);
 let updatedAlumniString = JSON.stringify(alumniArray);
 localStorage.setItem("alumnis", updatedAlumniString);
 
-// Event listener para el botón Save and Continue
 document
   .getElementById("saveAndContinueBtn")
   .addEventListener("click", function () {
-    // Llamar a la función para guardar el alumni
     saveAlumni();
-    // Redirigir a la página de overview (reemplaza "overview.html" con tu ruta real)
+
     window.location.href = "overview.html";
   });
