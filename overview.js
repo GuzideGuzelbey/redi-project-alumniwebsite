@@ -18,7 +18,6 @@ var alumnis = [
     courseinfo: ["User Experience Design", "User Interface Design", "Prototyping"], experience: ["Mid-level (4-6 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
     availability: ["Available now"], typeofwork: ["Part-time", "Full-time"]  },
 ];
-//arrays to be used for filtering
 
 
 //compare alumnis name field A to Z
@@ -55,6 +54,8 @@ function RemoveAllCards(){
         child = cardContainer.lastElementChild; 
     } 
 }
+
+//arrays to be used for filtering
 
 
 // to get items in alumnis array from the local storage
