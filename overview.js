@@ -1,11 +1,25 @@
 var alumnis = [
-    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
-    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png" },
+    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    courseinfo: ["JavaScript", "User Interface Design", "Visual Design", "React.js"], experience: ["Junior (0-3 years)"], projects: ["Projects", "Portfolio"], locationofwork: ["Aarhus"], 
+    availability: ["Available now"], typeofwork: ["Part-time", "Student Job", "Internship"] },
+    { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping"], experience: ["Mid-level (4-6 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
+    availability: ["Available now"], typeofwork: ["Part-time", "Full-time"] },
+    { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    courseinfo: ["JavaScript", "Node.js", "React.js"], experience: ["Junior (0-3 years)"], projects: ["Projects"], locationofwork: ["Aarhus", "Copenhagen"], 
+    availability: ["Available now"], typeofwork: ["Full-time", "Student Job", "Internship"] },
+    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing"], experience: ["Junior (0-3 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
+    availability: ["Available now"], typeofwork: ["Part-time", "Full-time", "Student Job", "Internship"] },
+    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing"], experience: ["Junior (0-3 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
+    availability: ["Available now"], typeofwork: ["Part-time", "Full-time", "Student Job", "Internship"] },
+    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    courseinfo: ["User Experience Design", "User Interface Design", "Prototyping"], experience: ["Mid-level (4-6 years)"], projects: ["Portfolio"], locationofwork: ["Aarhus", "Remote"], 
+    availability: ["Available now"], typeofwork: ["Part-time", "Full-time"]  },
 ];
+//arrays to be used for filtering
+
 
 //compare alumnis name field A to Z
 function compareAZ(a, b) {

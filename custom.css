@@ -26,8 +26,15 @@
     color:#EA5B25;
     font-style: italic;
     font-weight: 700;
-    margin-top: 5px;
-    font-size: 16px;
+    font-size: 16px;    
+}
+
+.card-body .btn-social-icon, .btn-link{
+    margin-top: -5px;
+}
+
+.card-body .redi{
+    margin-top: 20px;
 }
 
 .col-10 h2{
