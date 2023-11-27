@@ -42,7 +42,7 @@ function saveAlumni() {
     aboutYou: aboutYou,
     resume: resume,
     linkedin: linkedin,
-    linkedinImageUrl: "./rediimages/linkedin.png",
+    linkedinImageUrl: "./images/linkedin_form.png",
     emailImageUrl : "./rediimages/mail.png",
     portfolioLink: "#",
     detailedinfo: [courseTypeValue, experienceLevelValue, locationValue, availabilityValue, typeOfWorkValue],
