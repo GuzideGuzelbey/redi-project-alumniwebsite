@@ -17,7 +17,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
     />
-    <title>Alumni Website - ReDI School Aarhus</title>
+    <!-- Javascript -->
+    <script src="form.js"></script>
+    <title>Redi Talent - Alumni Website Redi School</title>
   </head>
   <body>
     <header class="header">
@@ -39,12 +41,13 @@
       </div>
       <!-- Icon Language English -->
       <div class="language-icon">
-        <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px" />
+        <img src="images/english.png" width="60px" />
       </div>
     </header>
     <!-- Main container Form -->
+    <div class="container-form-title">Add Alumni Profile</div>
+
     <div class="container-form">
-      <div class="container-form-title">Add Alumni Profile</div>
       <!-- Inner container Form -->
       <div class=".inner-containerform">
         <div class="inner-left">
@@ -52,12 +55,14 @@
 
           <button class="accordionForm">Personal Details</button>
           <div class="panel">
-            <a href="#form-center-container" id="enlace-form-center-container"
+            <a href="#form-addalumni" id="enlace-form-center-container"
               >Add or Edit Personal Information</a
             >
           </div>
 
-          <button class="accordionForm">Course Type</button>
+          <button class="accordionForm" onclick="saveAlumni();">
+            Course Type
+          </button>
           <div class="panel">
             <input
               type="radio"
@@ -110,7 +115,9 @@
             <label for="course_AI">AI Artificial Intelligence</label><br />
           </div>
 
-          <button class="accordionForm">Experience Level</button>
+          <button class="accordionForm" onclick="saveAlumni();">
+            Experience Level
+          </button>
           <div class="panel">
             <input
               type="radio"
@@ -141,7 +148,9 @@
             <p>· Projects</p>
             <p>· Portfolio</p>
           </div>
-          <button class="accordionForm">Location</button>
+          <button class="accordionForm" onclick="saveAlumni();">
+            Location
+          </button>
           <div class="panel">
             <input
               type="radio"
@@ -165,7 +174,9 @@
             />
             <label for="location_Remoto">Remoto</label>
           </div>
-          <button class="accordionForm">Availability</button>
+          <button class="accordionForm" onclick="saveAlumni();">
+            Availability
+          </button>
           <div class="panel">
             <input
               type="radio"
@@ -182,19 +193,21 @@
             />
             <label for="availability_Not">Not looking for job</label>
           </div>
-          <button class="accordionForm">Type of Work</button>
+          <button class="accordionForm" onclick="saveAlumni();">
+            Type of Work
+          </button>
           <div class="panel">
             <input
               type="radio"
               id="work_Fulltime"
-              name="TypeofWork"
+              name="typeofWork"
               value="work-Fulltime"
             />
             <label for="work_Fulltime">Full-time</label><br />
             <input
               type="radio"
               id="work_Parttime"
-              name="TypeofWork"
+              name="typeofWork"
               value="work-Parttime"
             />
             <label for="work_Parttime">Part-time</label><br />
@@ -202,7 +215,7 @@
             <input
               type="radio"
               id="work_Student"
-              name="TypeofWork"
+              name="typeofWork"
               value="work-Student"
             />
             <label for="work_Student">Student Job</label><br />
@@ -210,7 +223,7 @@
             <input
               type="radio"
               id="work_Intership"
-              name="TypeofWork"
+              name="typeofWork"
               value="work-Intership"
             />
             <label for="work_Intership">Intership</label><br />
@@ -218,25 +231,47 @@
         </div>
         <div class="inner-right">
           <!-- InnerContainer right -->
-          <p>Boost your ReDi Talent with a personalized profile</p>
-          <div id="form-center-container">
+          <p>
+            Boost your ReDi <span class="orange-text">Talent</span> with a
+            personalized profile
+          </p>
+
+          <div id="form-addalumni">
             <div class="form-center-container1list">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required /><br />
-
-              <label for="last-name">Last Name:</label>
-              <input type="text" id="last-name" name="last-name" required />
-
-              <label for="email-contact">Email Contact:</label>
+              <label for="firstname">Name:</label>
               <input
                 type="text"
-                id="email-contact"
-                name="email-contact"
+                id="firstname"
+                name="firstname"
+                autocomplete="given-name"
                 required
               />
 
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                autocomplete="family-name"
+                required
+              />
+
+              <label for="email">Email Contact:</label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                autocomplete="on"
+                required
+              />
               <label for="about-you">About You:</label>
-              <textarea id="about-you" name="about-you"></textarea>
+              <textarea
+                id="about-you"
+                name="about-you"
+                rows="4"
+                cols="30"
+                required
+              ></textarea>
 
               <label for="resume">Upload Resume:</label>
               <input
@@ -244,6 +279,7 @@
                 id="resume"
                 name="resume"
                 accept=".pdf,.doc,.docx"
+                onchange="previewResume(this)"
               />
 
               <label for="linkedin" class="linkedin-label">
@@ -254,30 +290,35 @@
                 />
                 LinkedIn URL:
               </label>
-              <input type="url" id="linkedin" name="linkedin" />
+              <input
+                type="url"
+                id="linkedin"
+                name="linkedin"
+                autocomplete="url"
+              />
             </div>
             <div class="form-center-container2list">
               <div class="avatar-form">
                 <label for="upload-photo" id="avatar-label">
-                  <img src="images/avatar-form.jpg" alt="avatar-form" />
+                  <img
+                    src="images/avatar_form.png"
+                    alt="avatar-form"
+                    id="avatar-preview"
+                  />
                 </label>
                 <input
                   type="file"
                   id="upload-photo"
                   accept="image/*"
                   style="display: none"
+                  onchange="previewImage(this)"
                 />
               </div>
               <div class="skills-form">
                 <label for="skills"></label>
-                <input
-                  id="skills"
-                  name="skills"
-                  placeholder="* Top Skills"
-                  required
-                />
+                <input id="skills" name="skills" placeholder="* Top Skills" />
               </div>
-              <!-- Botón Save and Continue -->
+              <!-- Button Save and Continue -->
               <button type="button" id="saveAndContinueBtn">
                 Save and Continue
               </button>
@@ -286,21 +327,7 @@
         </div>
       </div>
     </div>
-    <script>
-      var acc = document.getElementsByClassName("accordionForm");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
+    <script src="header.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>

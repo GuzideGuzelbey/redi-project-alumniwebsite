@@ -1,15 +1,34 @@
-document
-  .getElementById("alumniForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+var acc = document.getElementsByClassName("accordionForm");
+var i;
 
-    let name = document.getElementById("name").value;
-    let skills = document.getElementById("skills").value;
-    let email = document.getElementById("email").value;
-    let linkedin = document.getElementById("linkedin").value;
-
-    console.log("Name:", name);
-    console.log("Skills/Competencies:", skills);
-    console.log("E-mail:", email);
-    console.log("LinkedIn:", linkedin);
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
   });
+}
+
+// Function to get the path of the selected photo and show a preview //
+function previewImage(input) {
+  var avatarPreview = document.getElementById("avatar-preview");
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      avatarPreview.src = e.target.result;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Function to obtain the path of the selected CV //
+function previewResume(input) {
+  console.log("Selected Resume: " + input.files[0].name);
+}

@@ -4,9 +4,9 @@ let alumniArray = alumniString ? JSON.parse(alumniString) : [];
 // Function to save a new alumni
 
 function saveAlumni() {
-  let name = document.getElementById("alumniName").value;
+  let firstName = document.getElementById("firstname").value;
   let lastName = document.getElementById("lastname").value;
-  let emailContact = document.getElementById("email-contact").value;
+  let emailContact = document.getElementById("email").value;
   let aboutYou = document.getElementById("about-you").value;
   let resume = document.getElementById("resume").value;
   let linkedin = document.getElementById("linkedin").value;
@@ -28,7 +28,7 @@ function saveAlumni() {
   );
   let availabilityValue = availability ? availability.value : null;
 
-  let typeOfWork = document.querySelector('input[name="TypeofWork"]:checked');
+  let typeOfWork = document.querySelector('input[name="typeofWork"]:checked');
   let typeOfWorkValue = typeOfWork ? typeOfWork.value : null;
 
   let avatarPath = document.getElementById("upload-photo").value;
@@ -37,11 +37,11 @@ function saveAlumni() {
 
 // Create an object JSON with the collected information
 
-let formData = {
-  Name: alumniName,
+let newAlumni = {
+  firstName: firstName,
   lastName: lastName,
-  emailContact: email - contact,
-  aboutYou: about - you,
+  emailContact: emailContact,
+  aboutYou: aboutYou,
   resume: resume,
   linkedin: linkedin,
   skills: skills,
@@ -58,10 +58,13 @@ alumniArray.push(newAlumni);
 let updatedAlumniString = JSON.stringify(alumniArray);
 localStorage.setItem("alumnis", updatedAlumniString);
 
-document
-  .getElementById("saveAndContinueBtn")
-  .addEventListener("click", function () {
-    saveAlumni();
+let saveAndContinueBtn = document.getElementById("saveAndContinueBtn");
 
-    window.location.href = "overview.html";
-  });
+function handleSaveAndContinue() {
+  saveAlumni();
+  window.location.href = "overview.html";
+  // Remove the event listener after it's triggered
+  saveAndContinueBtn.removeEventListener("click", handleSaveAndContinue);
+}
+
+saveAndContinueBtn.addEventListener("click", handleSaveAndContinue);
