@@ -37,30 +37,33 @@ function saveAlumni() {
   // Create an object JSON with the collected information
 
   let newAlumni = {
-    firstName: firstName,
-    lastName: lastName,
-    emailContact: emailContact,
+    name: firstName + " " + lastName,
+    email: emailContact,
     aboutYou: aboutYou,
     resume: resume,
     linkedin: linkedin,
+    linkedinImageUrl: "./rediimages/linkedin.png",
+    emailImageUrl : "./rediimages/mail.png",
+    portfolioLink: "#",
+    detailedinfo: [courseTypeValue, experienceLevelValue, locationValue, availabilityValue, typeOfWorkValue],
     skills: skills,
-    courseType: courseTypeValue,
+    course: courseTypeValue,
     experienceLevel: experienceLevelValue,
     location: locationValue,
     availability: availabilityValue,
     typeOfWork: typeOfWorkValue,
-    avatarPath: avatarPath,
+    imageSource: avatarPath,
     resumePath: resumePath,
   };
 
-  alumniArray.push(newAlumni);
-  let updatedAlumniString = JSON.stringify(alumniArray);
-  localStorage.setItem("alumnis", updatedAlumniString);
+  alumniArray.push(newAlumni);  
 }
 
 
 function handleSaveAndContinue() {
   saveAlumni();
+  let updatedAlumniString = JSON.stringify(alumniArray);
+  localStorage.setItem("alumnis", updatedAlumniString);
   window.location.href = "index.html";
   // Remove the event listener after it's triggered
   saveAndContinueBtn.removeEventListener("click", handleSaveAndContinue);

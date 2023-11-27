@@ -1,18 +1,18 @@
 let alumnis = [
-    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png", 
     detailedinfo: ["Javascript Basic", "User Interface Design", "Visual Design", "Angular", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
-    { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    { name: "Eleni Panou", imageSource: "rediimages/eleni.png", course: "UX/UI Design", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", emailImageUrl:"./rediimages/mail.png", 
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Mid-level (4-6 years)", "Portfolio", "Aarhus", "Remote", 
      "Available now","Part-time", "Full-time"] },
-    { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    { name: "Güzide Güzelbey", imageSource: "rediimages/guzide.png", course: "Javascript", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png",
     detailedinfo: ["Javascript Basic", "Node.js", "React.js", "Junior (0-3 years)", "Projects", "Aarhus", "Copenhagen", "Start Date","Full-time", "Student Job", "Internship"] },
-    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png", 
+    { name: "Diana Leckova", imageSource: "rediimages/diana.png", course: "UX/UI Design", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png", 
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing", "Junior (0-3 years)", "Portfolio", "Aarhus", "Remote", 
     "Available now", "Part-time", "Full-time", "Student Job", "Internship"] },
-    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    { name: "Monica Hernandez", imageSource: "rediimages/monica.png", course: "UX/UI Design", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png",
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Usability Testing",  "Junior (0-3 years)", "Portfolio", "Aarhus", "Remote", 
      "Available now","Part-time", "Full-time", "Student Job", "Internship"] },
-    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedinUrl: "./rediimages/linkedin.png", email:"./rediimages/mail.png",
+    { name: "Noemi Elias", imageSource: "rediimages/noemi.png", course: "UX/UI Design", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png",
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Available now", "Mid-level (4-6 years)", "Portfolio","Aarhus", "Remote", "Part-time", "Full-time"] },
 ];
 
@@ -159,22 +159,31 @@ function RefreshPage(alumnis){
                 reditext.classList.add("card-text", "redi");
                 reditext.textContent = "ReDi to Work";
 
-                const linkedinUrl = document.createElement("img");
-                linkedinUrl.classList.add("btn", "btn-social-icon", "blue");
-                linkedinUrl.src = alumnis[j].linkedinUrl;
-                linkedinUrl.alt = "linkedin";
+                const linkedinImageUrl = document.createElement("a");
+                linkedinImageUrl.classList.add("btn");
+                linkedinImageUrl.href = alumnis[j].linkedin;
 
-                const email = document.createElement("img");
-                email.classList.add("btn", "btn-link");
-                email.src = alumnis[j].email;
-                email.alt = "email";
+                const linkedinImage = document.createElement("img");
+                linkedinImage.classList.add("btn", "btn-social-icon");
+                linkedinImage.src = alumnis[j].linkedinImageUrl;
+                linkedinImage.alt = "linkedin";
+                linkedinImageUrl.appendChild(linkedinImage);
+
+                const emailImageUrl = document.createElement("a");
+                emailImageUrl.classList.add("btn", "btn-link");
+                emailImageUrl.href = "mailto:" + alumnis[j].email;
+                
+                const emailImage = document.createElement("img");
+                emailImage.src = alumnis[j].emailImageUrl;
+                emailImage.alt = "emailImageUrl";
+                emailImageUrl.appendChild(emailImage);
 
                 cardbody.appendChild(name);
                 cardbody.appendChild(course);
                 cardbody.appendChild(portfolioLink);
                 cardbody.appendChild(reditext);
-                cardbody.appendChild(linkedinUrl);
-                cardbody.appendChild(email);
+                cardbody.appendChild(linkedinImageUrl);
+                cardbody.appendChild(emailImageUrl);
 
                 card.appendChild(cardbody);
 
