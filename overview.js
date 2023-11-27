@@ -97,7 +97,7 @@ function RemoveAllCards(){
 
 
 // to get items in alumnis array from the local storage
-//alumnis = localStorage.getItem("alumnis"); 
+// alumnis = localStorage.getItem("alumnis"); 
 // add after Marcela finishes her js code and you have to do more things
 
 

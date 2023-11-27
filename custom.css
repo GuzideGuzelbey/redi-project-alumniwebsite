@@ -3,8 +3,13 @@
     max-width: 100%;
 }
 
+/*
+.row > * {
+    margin: 0 !important;
+}
+*/
 .col-3{
-    max-width: 20%;
+    padding-right: 0px;
 }
 
 .col-3, .accordion-flush, .accordion-button{
