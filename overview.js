@@ -102,7 +102,9 @@ function RemoveAllCards(){
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    RefreshPage(alumnis);
+    let alumniString = localStorage.getItem("alumnis");
+    let alumniArray = alumniString ? JSON.parse(alumniString) : alumnis;
+    RefreshPage(alumniArray);
 });
 
 function RefreshPage(alumnis){
@@ -158,7 +160,7 @@ function RefreshPage(alumnis){
                 reditext.textContent = "ReDi to Work";
 
                 const linkedinUrl = document.createElement("img");
-                linkedinUrl.classList.add("btn", "btn-social-icon");
+                linkedinUrl.classList.add("btn", "btn-social-icon", "blue");
                 linkedinUrl.src = alumnis[j].linkedinUrl;
                 linkedinUrl.alt = "linkedin";
 
@@ -191,5 +193,12 @@ function RefreshPage(alumnis){
     }
 }
 
+
+function NavigateToAddAlumni(){
+    let alumniString = localStorage.getItem("alumnis");
+    let alumniArray = alumniString ? JSON.parse(alumniString) : alumnis;
+    localStorage.setItem("alumnis",JSON.stringify(alumniArray));
+    window.location.href = "addAlumni-form.html"; 
+}
 
 

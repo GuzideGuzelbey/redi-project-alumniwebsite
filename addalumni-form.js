@@ -33,38 +33,37 @@ function saveAlumni() {
 
   let avatarPath = document.getElementById("upload-photo").value;
   let resumePath = document.getElementById("resume").value;
+
+  // Create an object JSON with the collected information
+
+  let newAlumni = {
+    firstName: firstName,
+    lastName: lastName,
+    emailContact: emailContact,
+    aboutYou: aboutYou,
+    resume: resume,
+    linkedin: linkedin,
+    skills: skills,
+    courseType: courseTypeValue,
+    experienceLevel: experienceLevelValue,
+    location: locationValue,
+    availability: availabilityValue,
+    typeOfWork: typeOfWorkValue,
+    avatarPath: avatarPath,
+    resumePath: resumePath,
+  };
+
+  alumniArray.push(newAlumni);
+  let updatedAlumniString = JSON.stringify(alumniArray);
+  localStorage.setItem("alumnis", updatedAlumniString);
 }
 
-// Create an object JSON with the collected information
-
-let newAlumni = {
-  firstName: firstName,
-  lastName: lastName,
-  emailContact: emailContact,
-  aboutYou: aboutYou,
-  resume: resume,
-  linkedin: linkedin,
-  skills: skills,
-  courseType: courseTypeValue,
-  experienceLevel: experienceLevelValue,
-  location: locationValue,
-  availability: availabilityValue,
-  typeOfWork: typeOfWorkValue,
-  avatarPath: avatarPath,
-  resumePath: resumePath,
-};
-
-alumniArray.push(newAlumni);
-let updatedAlumniString = JSON.stringify(alumniArray);
-localStorage.setItem("alumnis", updatedAlumniString);
-
-let saveAndContinueBtn = document.getElementById("saveAndContinueBtn");
 
 function handleSaveAndContinue() {
   saveAlumni();
-  window.location.href = "overview.html";
+  window.location.href = "index.html";
   // Remove the event listener after it's triggered
   saveAndContinueBtn.removeEventListener("click", handleSaveAndContinue);
 }
 
-saveAndContinueBtn.addEventListener("click", handleSaveAndContinue);
+
