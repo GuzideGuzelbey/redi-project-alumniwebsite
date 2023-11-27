@@ -85,6 +85,7 @@ body.no-scroll {
   font-weight: bold;
   float: right;
   margin-left: 5px;
+  margin-right: 20px;
 }
 
 .accordionForm.active:after {
@@ -136,7 +137,7 @@ body.no-scroll {
 
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   background-color: #D9D9D9;
   border-radius: 10px;
@@ -191,12 +192,12 @@ body.no-scroll {
 
 .form-center-container2list {
 
-
   float: none;
   text-align: right;
   width: 35%;
   box-sizing: border-box;
-  padding-right: 40px;
+  padding-right: 35px;
+  color: #0b132a;
 
 }
 
@@ -204,7 +205,7 @@ body.no-scroll {
 
 .avatar-form {
   width: 100%;
-  max-width: 285px;
+  max-width: 250px;
   height: auto;
   background-color: #ffff;
   border: 2px solid #f7f6f6;
@@ -246,21 +247,24 @@ body.no-scroll {
   align-items: center;
   text-align: center;
   padding-top: 10px;
+  font-size: 12px;
+
 
 }
 
 
 .skills-form input {
   width: 100%;
-  max-width: 285px;
+  max-width: 250px;
   padding: 20px;
+
 
 }
 
 .skills-form textarea {
   width: 100%;
   max-width: 400px;
-  padding: 10px;
+  padding: 15px;
 
 }
 
