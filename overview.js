@@ -1,3 +1,6 @@
+// in order to clean the local storage every time
+localStorage.removeItem  
+
 let alumnis = [
     { name: "Marcela Bazela", imageSource: "rediimages/marcela.png", course: "Javascript", portfolioLink: "#", linkedin: "http://google.com", linkedinImageUrl: "./images/linkedin_form.png", email:"test@gmail.com", emailImageUrl:"./rediimages/mail.png", 
     detailedinfo: ["Javascript Basic", "User Interface Design", "Visual Design", "Angular", "React.js", "Junior (0-3 years)", "Projects", "Portfolio", "Aarhus", "Available now", "Part-time", "Student Job", "Internship"] },
@@ -56,7 +59,7 @@ let alumnis = [
     RefreshPage(filteredalumnis);
   }
   
-  
+localStorage.removeItem  
 /*------------------------- SORT ------------------------ */
 //compare alumnis name field A to Z
 function compareAZ(a, b) {
@@ -95,9 +98,6 @@ function RemoveAllCards(){
 
 
 // to get items in alumnis array from the local storage
-// alumnis = localStorage.getItem("alumnis"); 
-// add after Marcela finishes her js code and you have to do more things
-
 
 document.addEventListener("DOMContentLoaded", function () {
     let alumniString = localStorage.getItem("alumnis");
@@ -200,6 +200,7 @@ function RefreshPage(alumnis){
     }
 }
 
+//trigger of the add alumni button in the overview page
 
 function NavigateToAddAlumni(){
     let alumniString = localStorage.getItem("alumnis");
@@ -207,5 +208,37 @@ function NavigateToAddAlumni(){
     localStorage.setItem("alumnis",JSON.stringify(alumniArray));
     window.location.href = "addAlumni-form.html"; 
 }
+
+//for the header
+var checkbox = document.getElementById("nav-toggle");
+
+checkbox.addEventListener("change", function () {
+  document.body.classList.toggle("no-scroll", checkbox.checked);
+});
+
+//----SEARCH------>
+
+function SearchAlumni(){
+    let alumniString = localStorage.getItem("alumnis");
+    let alumniArray = alumniString ? JSON.parse(alumniString) : alumnis;
+    let text = document.getElementById("searchinput").value.toLowerCase();
+    let searchedalumni = [];
+    for(let z = 0; z < alumniArray.length; z++){
+        if(alumniArray[z].name.toLowerCase().includes(text) || alumniArray[z].course.toLowerCase().includes(text)){
+            searchedalumni.push(alumniArray[z]);
+        }
+        else{
+            for(let q=0; q < alumniArray[z].detailedinfo.length; q++){
+                if(alumniArray[z].detailedinfo[q].toLowerCase().includes(text)){
+                    searchedalumni.push(alumniArray[z]);
+                    break;
+                }
+            }
+        }
+    }
+    RemoveAllCards();
+    RefreshPage(searchedalumni);
+}
+
 
 
