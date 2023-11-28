@@ -16,8 +16,6 @@ let alumnis = [
     detailedinfo: ["User Experience Design", "User Interface Design", "Prototyping", "Available now", "Mid-level (4-6 years)", "Portfolio","Aarhus", "Remote", "Part-time", "Full-time"] },
 ];
 
-
-
   let activeFilters = [];
 
   function courseInfoFilter(type){

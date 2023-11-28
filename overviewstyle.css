@@ -1,100 +1,63 @@
+html{
+  height: 100%;
+}
+
 body {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0%
 }
-
-/* middle part*/
-.alumni-profile-overview-header{
-  background-color: #9FDAE9D9;
-}
-
-
-.btn.btn-social-icon{
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  background-color: #0177b5;
-}
-
-/* main {
-  flex-grow: 1;
-  background-color: #EBE9E9;
-}
- .container{
-  flex-direction: row;
-  width: 100%;
-  float: left;
+/*FOOTER*/
+.footer {
   bottom: 0;
-  margin: 0;
-  padding: 0;
- }
-
-.filter{
-  box-sizing: border-box;
-  background-color: #2492B1;
-  flex-direction: column;
-  width: 20%;
-  height: 500px;
-  float: left;
-  display: flex;
-}
-
-.alumniprofile{
-  
-  background-color: #9FDAE9;
-  width: 70%;
-  height: 50px;
-  flex-direction: row;
-  float: left;
-  box-sizing: border-box;
-
-}
-
-.sort{
-  background-color: #9FDAE9;
-  width: 10%;
-  height: 50px;
-  flex-direction: row;
-  float: right;
-  box-sizing: border-box;
-}
-
-.alumnilist {
-  height: 600px;
-  width: 80%;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  box-sizing: border-box;
-} */
-
-/*===== For Footer =====*/
-
-footer {
-  bottom: 0;
-  width: 100%;
+  max-width: 100%;
   margin-top: auto;
   padding: 0;
-  align-content: space-between;
+  background-color: rgba(217, 217, 217, 1);
+  color: #525356;
+  height: 40%;
+  bottom: 0px;
+}
+.footer .footer-content{
+  height: 90%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.row .left, .row .social-media, .row .right {
+  padding: 0 15px;
+  flex: 1;
+}
+
+.row .social-media, .row .right{
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .columns {
+    display: flex;
+  }
+  .column {
+    flex: 1;
+  }
 }
 
 
+/*
 .footer-left{
     box-sizing: border-box;
     background-color: #2196F3;
     padding: 20px;
     float: left;
-    width: 20%; /* The width is 20%, by default */}
+    width: 20%; //The width is 20%, by default}
 
 .footer-middle{
   box-sizing: border-box;
   background-color: #f1f1f1;
   padding: 20px;
   float: left;
-  width: 60%; /* The width is 60%, by default */
+  width: 60%; // The width is 60%, by default
   
 }
 
@@ -121,12 +84,12 @@ footer {
   box-sizing: border-box;
   background-color: whitesmoke;  
   float: left;
-  width: 20%; /* The width is 20%, by default */
+  width: 20%; // The width is 20%, by default 
 }
 
 @media screen and (max-width: 834px) {
   .footer-left, .footer-middle, .footer-right {
-    width: 100%; /* The width is 100%, when the viewport is 834px or smaller */
+    width: 100%; // The width is 100%, when the viewport is 834px or smaller 
   }
 
   .footer-left{
@@ -134,5 +97,5 @@ footer {
   }
 }
 
-
+*/
 
