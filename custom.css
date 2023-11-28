@@ -17,10 +17,11 @@
   }
 
 .container{
-    background-color: #EBE9E9;
+    flex-grow: 1; 
+    background-color: rgba(235, 233, 233, 1);
     max-width: 100%;
 }
-
+  
 
 .col-3{
     padding-right: 0px;
