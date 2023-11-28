@@ -23,25 +23,45 @@
     <title>Redi Talent - Alumni Website Redi School</title>
   </head>
   <body>
-    <header class="header">
+    <header class="main-header">
       <!-- Navigation Bar -->
-      <div class="navbar">
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn-navbar">
+      <div class="navbar-container">
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" class="navbar-toggle-btn">
           <i class="fas fa-bars"></i>
         </label>
-        <a class="navbar-brand"
-          ><img src="images/ReDitalent_logo.png" alt="ReDi Talent" class="logo"
-        /></a>
-        <ul class="nav-list">
+        <a class="logo-container" href="#">
+          <img
+            src="images/ReDitalent_logo.png"
+            alt="ReDi Talent"
+            class="logo"
+          />
+        </a>
+        <ul class="navigation-list">
           <li><a href="#">Home</a></li>
           <li><a class="active" href="#">Alumni Profiles</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="https://www.redi-school.org/our-impact" target="_blank"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="https://www.redi-school.org/contact" target="_blank"
+              >Contact</a
+            >
+          </li>
+          <li class="search-bar">
+            <form action="#" method="get">
+              <button-searchbar type="submit"
+                ><i class="fas fa-search"></i
+              ></button-searchbar>
+              <input type="text" placeholder="Search..." />
+            </form>
+          </li>
         </ul>
       </div>
-      <!-- Icon Language English -->
-      <div class="language-icon">
+      <!-- Language Icon -->
+      <div class="language-icon-container">
         <img src="images/english.png" width="60px" />
       </div>
     </header>
