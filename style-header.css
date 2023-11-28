@@ -204,6 +204,7 @@ body.no-scroll {
   }
 }
 
+
 @media (max-width: 858px) {
   .navbar-toggle-btn {
     display: block;
@@ -244,7 +245,7 @@ body.no-scroll {
     background: none;
     color: #ffffff;
     font-weight: 500;
-    text-decoration: none;
+    text-decoration: underline;
     transition: all 200ms ease;
   }
 
@@ -256,6 +257,13 @@ body.no-scroll {
     display: initial;
   }
 }
+
+@media (max-width: 858px) {
+  .navigation-list li.search-bar {
+    display: none;
+  }
+}
+
 
 /* Language Icon Hide on Small Screens */
 @media only screen and (max-width: 768px) {
@@ -269,6 +277,7 @@ body.no-scroll {
     display: none;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   .intro-banner-container {
