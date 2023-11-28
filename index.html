@@ -15,35 +15,60 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">    
     </head>
     <body>
-        <header class="header">
-            <!-- Navigation Bar -->
-            <div class="navbar">
-              <input type="checkbox" id="check" />
-              <label for="check" class="checkbtn-navbar">
-                <i class="fas fa-bars"></i>
-              </label>
-              <a class="navbar-brand"
-                ><img src="images/ReDitalent_logo.png" alt="ReDi Talent" class="logo"/></a>
-              <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a class="active" href="#">Alumni Profiles</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <!-- Icon Language English -->
-            <div class="language-icon">
-              <img src="images/f9eb6a27d4691c8c7dd1017811a9ca27.png" width="60px"/>
-            </div>
-            <!-- Banner image and Button Explorer profiles -->
-            <div class="intro-banner">
-              <div class="row"><h1>Discover ReDi Alumni Profiles</h1></div>
-              <button class="row-button" onclick="NavigateToAddAlumni()">Add Alumni</button>
-            </div>
-        </header>
+       <!-- HEADER -->
+      <header class="main-header">
+        <!-- Navigation Bar -->
+        <div class="navbar-container">
+          <input type="checkbox" id="nav-toggle" />
+          <label for="nav-toggle" class="navbar-toggle-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <a class="logo-container" href="#">
+            <img
+              src="images/ReDitalent_logo.png"
+              alt="ReDi Talent"
+              class="logo"
+            />
+          </a>
+          <ul class="navigation-list">
+            <li><a href="#">Home</a></li>
+            <li><a class="active" href="#">Alumni Profiles</a></li>
+            <li>
+              <a href="https://www.redi-school.org/our-impact" target="_blank"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="https://www.redi-school.org/contact" target="_blank"
+                >Contact</a
+              >
+            </li>
+            <li class="search-bar">
+              <form action="#" method="get">
+                <button-searchbar onclick="SearchAlumni()" type="submit">
+                  <i class="fas fa-search"></i>
+                </button-searchbar>
+                <input id="searchinput" type="text" placeholder="Search..." />
+              </form>
+            </li>
+          </ul>
+        </div>
+        <!-- Language Icon -->
+        <div class="language-icon-container">
+          <img src="images/english.png" width="60px" />
+        </div>
+        <!-- Banner Image and Button Explorer Profiles -->
+        <div class="intro-banner-container">
+          <div class="banner-row"><h1>Discover ReDi Alumni Profiles</h1></div>
+          <button class="banner-row-button" onclick="NavigateToAddAlumni()">
+            Add Profile
+          </button>
+        </div>
+      </header>
+         <!-- MIDDLE PART -->
         <div class="container">
             <div class="row">
-                <div class="col-3" style="max-width: 25%;">
+                <div class="col-2" style="max-width: 25%;">
                     <div class="accordion accordion-flush" id="filter" style="color: white;">
                         <div class="filterhead" style="display: block;"><img src=./rediimages/filtericon.png style="float: left;"><h2 class="filtertype" style="word-wrap: break-word; font-size: 22px; font-family: Poppins; font-weight: 200; float: left;margin-left: 4%; margin-top: 4%;">Filter</h2></div>
                         <div class="accordion-item">
@@ -293,8 +318,9 @@
                 </div>
             </div>
         </div>
-        <footer style="font-family: Poppins;">
-          <div class="footer-content">
+        <!-- FOOTER -->
+        <footer>
+          <div class="footer-content" style="font-family: Poppins;">
             <div class="column">
               <div class="row left">
                 <div>
@@ -314,7 +340,8 @@
             </div>
             <div class="column">
               <div class="row social-media">
-                <a target="_blank" href="https://www.facebook.com/redischooldk/?locale=da_DK"><img src=".\rediimages\facebook.png" width="44" height="44" alt="facebook"/></a>
+                
+                <a target="_blank" href="https://www.facebook.com/redischooldk/?locale=da_DK" title="facebook"><i class="fa"></i></a>
                 <a target="_blank" href="https://www.instagram.com/redischool_aarhus/?hl=cs"><img src=".\rediimages\insta.png" width="44" height="44" alt="instagram"/></a>
                 <a target="_blank" href="https://www.redi-school.org/redi-school-aarhus"><img src=".\rediimages\twitter.png" width="44" height="44" alt="X"/></a>
                 <a target="_blank" href="https://www.youtube.com/c/ReDISchoolofDigitalIntegration"></a><img src=".\rediimages\youtube.png" width="44" height="44" alt="youtube"/></a>
@@ -332,6 +359,7 @@
           </div>
                 
         </footer>
+         <!-- FOOTER END! -->
         <script src="overview.js"></script>
     </body>
 </html>
