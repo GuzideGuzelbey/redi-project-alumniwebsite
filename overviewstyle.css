@@ -7,15 +7,15 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0%
-}
+} 
+
 /*FOOTER*/
 .footer {
   bottom: 0;
   max-width: 100%;
   margin-top: auto;
   padding: 0;
-  background-color: rgba(217, 217, 217, 1);
-  color: #525356;
+ 
   height: 40%;
   bottom: 0px;
 }
@@ -23,6 +23,8 @@ body {
   height: 90%;
   display: flex;
   margin-bottom: 10px;
+  background-color: rgb(243, 17, 17);
+  color: #525356;
 }
 
 .row .left, .row .social-media, .row .right {
@@ -30,9 +32,7 @@ body {
   flex: 1;
 }
 
-.row .social-media, .row .right{
-  display: block;
-}
+
 
 @media (min-width: 768px) {
   .columns {
