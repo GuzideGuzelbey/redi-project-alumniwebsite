@@ -11,10 +11,11 @@
     padding: 0;
     background-color: #0082ca;
 }
-
-.blue{
-    background-color: #0082ca; 
+.btn-social-icon, .btn-link{
+    scale: 1.5;
 }
+
+
 
 .container{
     flex-grow: 1; 
@@ -40,17 +41,30 @@
 
 .card{
     background-color:#EBE9E9;
+    scale: 80%;
+}
+.card-body{
+    scale: 120%; 
+    margin-top: 30px;  
+}
+
+.card-title{
+    font-weight: 700;
+    font-size: 22px;
+}
+.card-text{
+    font-size: 24px;
 }
 
 .redi{
     color:#EA5B25;
     font-style: italic;
     font-weight: 700;
-    font-size: 16px;    
+    font-size: 20px;    
 }
 
-.card-body .btn-social-icon, .btn-link{
-    margin-top: -5px;
+.btn-social-icon, .btn-link{
+    margin-top: -10px;
 }
 
 .card-body .redi{
