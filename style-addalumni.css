@@ -1,9 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
+
 
 }
 
@@ -72,6 +83,7 @@ body.no-scroll {
   border: none;
   outline: none;
   transition: 1s;
+  font-family: 'Poppins';
 }
 
 .accordionForm.active,
