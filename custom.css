@@ -1,20 +1,20 @@
   
   /* middle part*/
-  .alumni-profile-overview-header{
+.alumni-profile-overview-header{
     background-color: rgba(159, 218, 233, 0.65);
-  }
+}
   
   
-  .btn.btn-social-icon{
+.btn.btn-social-icon{
     width: 20px;
     height: 20px;
     padding: 0;
     background-color: #0082ca;
-  }
+}
 
-  .blue{
+.blue{
     background-color: #0082ca; 
-  }
+}
 
 .container{
     flex-grow: 1; 
