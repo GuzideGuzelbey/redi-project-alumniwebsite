@@ -33,7 +33,7 @@ footer {
   width: 100%;
   height: 200px;
   float: left;
-  color: #525356;
+  color: #6C6A6E;
   text-align: center;  
   margin-top: 70px;
 }
@@ -42,17 +42,18 @@ footer {
   text-decoration: none;
   color: inherit;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .contact-part p{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .contact-part h3{
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
+  word-wrap: break-word
 } 
 
 .policies-part{
@@ -62,13 +63,17 @@ footer {
   color: #525356;
   text-align: left;
   padding-left: 50px;
-  margin-top: 70px;
-  font-size: 20px;
+  margin-top: 30px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .policies-part ul{
   list-style: none;
+}
+
+ul li{
+  padding-top: 40px;
 }
 
 .policies-part a{
@@ -79,7 +84,7 @@ footer {
 .social-part {
   display: flexbox;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   float: left;
   color: #525356;
   text-align: center;  
@@ -87,30 +92,36 @@ footer {
 }
 
 .social-part a {
-  margin: 5px; /* Adjust the margin as needed for spacing between icons */
+  margin: 5px; 
   text-decoration: none;
 }
 
-.socialmedia-btn{
+.button-div{
+  
   width: 100%;
-} 
+  justify-content: space-between;
+  
+}
 
 .social-part a img {
-  width: 54px; /* Set the width of the icons */
-  height: 54px; /* Set the height of the icons */
+  width: 52px; /* Set the width of the icons */
+  height: 52px; /* Set the height of the icons */
   margin-right: 2px;
   margin-left: 2px;
 }
 
 .copyright {
-  font-size: 14px; /* Adjust the font size as needed */
+  font-size: 14px; 
   width: 100%;
   margin-top: 20px;
   text-align: center;
   font-weight: 400;
 }
 
-/* 3 Column Layout */
+
+
+/*RESPONSIVENESS*/
+
 @media only screen and (min-width: 834px) {
   .wrap {
     width: 100%;
@@ -133,18 +144,31 @@ footer {
 }
 
 
-@media only screen and (max-width: 835px) {
+@media only screen and (max-width: 769px) {
+  footer{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   .wrap {
     width: 100%;
   }
+
   .policies-part{
     padding: 0;
+    font-size: 22px;
+    font-weight: 300;
   }
+  
+  ul li{
+    padding-top: 5px;
+  }
+ 
 
   #right-sidebar {
     max-width: 100%;
     float: center;
+    margin-right: 0;
   }
 
   #main-content {
@@ -152,9 +176,15 @@ footer {
     float: center;
   }
 
+  .social-part a img {
+    width: 82px;
+    height: 82px;
+    padding: 4px;
+  }
+
   .button-div{
-    scale: 140%;
     margin-bottom: 30px;
+    
   }
 
   #left-sidebar {
@@ -163,13 +193,45 @@ footer {
     text-align: center;
     margin-right: 0px;
   } 
-  .contact-part p, h3{
-    font-size: x-large;
-  }
-  
-  br{
-    font-size: 14px;
-  }
-  
 
+  .contact-part h3{
+    font-size: 36px;
+    word-wrap: break-word;
+  }
+
+  .contact-part p{
+    font-size: 21px;
+  }
+
+  .contact-part .mail a{
+    font-size: 20px;
+  }
+
+  .copyright{
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 503px) {
+
+ 
+
+  .social-part a img {
+    width: 63px;
+    height: 63px;
+  }
+
+  .copyright{
+    font-size: 13px;
+  }
+
+  .policies-part{
+    padding: 0;
+    font-size: 21px;
+    font-weight: 300;
+  }
+  
+  ul li{
+    padding-top: 10px;
+  }
 }

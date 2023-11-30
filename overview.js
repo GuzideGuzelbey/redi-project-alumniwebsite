@@ -115,11 +115,11 @@ function RefreshPage(alumnis){
         row.className = "row";
         
         const col1 = document.createElement("div");
-        col1.className = "col-4";
+        col1.className = "col-md-4 col-12";
         const col2 = document.createElement("div");
-        col2.className = "col-4";
+        col2.className = "col-md-4 col-12";
         const col3 = document.createElement("div");
-        col3.className = "col-4";
+        col3.className = "col-md-4 col-12";
 
         row.appendChild(col1);
         row.appendChild(col2);

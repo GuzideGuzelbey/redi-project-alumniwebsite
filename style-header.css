@@ -143,9 +143,6 @@ body.no-scroll {
   border-radius: 20px;
   color: #000000;
   margin-left: 5px;
-
-
-
 }
 
 
@@ -203,7 +200,6 @@ body.no-scroll {
     font-size: 16px;
   }
 }
-
 
 @media (max-width: 858px) {
   .navbar-toggle-btn {
