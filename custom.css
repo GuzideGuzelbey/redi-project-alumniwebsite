@@ -26,6 +26,7 @@
 
 .col-3{
     padding-right: 0px;
+    max-width: 30% !important;
 }
 
 .col-3, .accordion-flush, .accordion-button{
@@ -133,13 +134,12 @@ h2 .button .accordion-button{
     background-color:  #2492B1 !important;
 }
 
-.accordion-flush .filtertype{
-    
-}
+.filterhead{
+    margin-top: 30px !important;
+}    
 
 .filterhead img{
     display: block;
-    margin-top: auto;
     max-width: 30%;
 }
 .accordion{
