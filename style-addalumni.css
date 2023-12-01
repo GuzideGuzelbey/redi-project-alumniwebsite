@@ -391,7 +391,372 @@ body.no-scroll {
   }
 
 
+  /* FOOTER */
+footer {
+  max-width: 100%;
+  margin-top: auto;
+  padding: 0;
+  bottom: 0;
+  /* Keep only one 'bottom' property */
+  background-color: #D9D9D9;
+  justify-content: space-between;
 
+}
+
+.wrap {
+  margin-top: 10px;
+  display: contents;
+}
+
+.wrap a,
+.wrap p,
+.wrap h3 {
+  font-family: "Poppins";
+}
+
+
+.contact-part {
+
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.contact-part .mail a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-part p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-part h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.policies-part {
+  width: 100%;
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: left;
+  padding-left: 50px;
+  margin-top: 70px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.policies-part ul {
+  list-style: none;
+}
+
+.policies-part a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-part {
+  display: flexbox;
+  width: 100%;
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.social-part a {
+  margin: 5px;
+  /* Adjust the margin as needed for spacing between icons */
+  text-decoration: none;
+}
+
+.socialmedia-btn {
+  width: 100%;
+}
+
+.social-part a img {
+  width: 54px;
+  /* Set the width of the icons */
+  height: 54px;
+  /* Set the height of the icons */
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.copyright {
+  font-size: 14px;
+  /* Adjust the font size as needed */
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* 3 Column Layout */
+@media only screen and (min-width: 834px) {
+  .wrap {
+    width: 100%;
+  }
+
+  #main-content {
+    max-width: 50%;
+    float: left;
+  }
+
+  #left-sidebar {
+    max-width: 25%;
+    float: left;
+  }
+
+  #right-sidebar {
+    max-width: 25%;
+    float: left;
+  }
+}
+
+
+@media only screen and (max-width: 835px) {
+
+
+
+  .wrap {
+    width: 100%;
+  }
+
+  .policies-part {
+    padding: 0;
+  }
+
+  #right-sidebar {
+    max-width: 100%;
+    float: center;
+  }
+
+  #main-content {
+    max-width: 100%;
+    float: center;
+  }
+
+  .button-div {
+    scale: 100%;
+    margin-bottom: 30px;
+  }
+
+  #left-sidebar {
+    max-width: 100%;
+    float: center;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .contact-part p,
+  h3 {
+    font-size: x-large;
+  }
+
+  br {
+    font-size: 14px;
+  }
+
+
+
+  .contact-part {
+    width: 100%;
+
+  }
+}
 
 
 }
+
+/* FOOTER */
+footer {
+  max-width: 100%;
+  margin-top: auto;
+  padding: 0;
+  bottom: 0;
+  /* Keep only one 'bottom' property */
+  background-color: #D9D9D9;
+  justify-content: space-between;
+
+}
+
+.wrap {
+  margin-top: 10px;
+  display: contents;
+}
+
+.wrap a,
+.wrap p,
+.wrap h3 {
+  font-family: "Poppins";
+}
+
+
+.contact-part {
+
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.contact-part .mail a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-part p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-part h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.policies-part {
+  width: 100%;
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: left;
+  padding-left: 50px;
+  margin-top: 70px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.policies-part ul {
+  list-style: none;
+}
+
+.policies-part a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-part {
+  display: flexbox;
+  width: 100%;
+  height: 200px;
+  float: left;
+  color: #525356;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.social-part a {
+  margin: 5px;
+  /* Adjust the margin as needed for spacing between icons */
+  text-decoration: none;
+}
+
+.socialmedia-btn {
+  width: 100%;
+}
+
+.social-part a img {
+  width: 54px;
+  /* Set the width of the icons */
+  height: 54px;
+  /* Set the height of the icons */
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.copyright {
+  font-size: 14px;
+  /* Adjust the font size as needed */
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* 3 Column Layout */
+@media only screen and (min-width: 834px) {
+  .wrap {
+    width: 100%;
+  }
+
+  #main-content {
+    max-width: 50%;
+    float: left;
+  }
+
+  #left-sidebar {
+    max-width: 25%;
+    float: left;
+  }
+
+  #right-sidebar {
+    max-width: 25%;
+    float: left;
+  }
+}
+
+
+@media only screen and (max-width: 835px) {
+
+
+
+  .wrap {
+    width: 100%;
+  }
+
+  .policies-part {
+    padding: 0;
+  }
+
+  #right-sidebar {
+    max-width: 100%;
+    float: center;
+  }
+
+  #main-content {
+    max-width: 100%;
+    float: center;
+  }
+
+  .button-div {
+    scale: 100%;
+    margin-bottom: 30px;
+  }
+
+  #left-sidebar {
+    max-width: 100%;
+    float: center;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .contact-part p,
+  h3 {
+    font-size: x-large;
+  }
+
+  br {
+    font-size: 14px;
+  }
+
+
+
+  .contact-part {
+    width: 100%;
+
+  }
+}
+
