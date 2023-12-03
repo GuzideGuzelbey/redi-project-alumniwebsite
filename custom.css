@@ -120,17 +120,16 @@ h2 .button .accordion-button{
 }
 
 .accordion-btn-active-icon{
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 .accordion-button:focus {
    
     border-color: none !important;
-    
     box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     background-color:  #2492B1 !important;
 }
 
@@ -160,7 +159,22 @@ h2 .button .accordion-button{
     .col-2 .btn{
         font-size: 16px !important;
     }
+    .col-3 .accordion-button{
+        font-size: 0.7rem !important;
+    }
+
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); 
+        font-size: 10% !important;
+    }
+    .filter-type{
+        font-size: 19px !important;
+    }
+    .filterhead img{
+        width: 20% !important;
+    }
 }
+
 
 @media only screen and (max-width: 415px) {
     .col-9 .alumni-profile-overview-header, button{
