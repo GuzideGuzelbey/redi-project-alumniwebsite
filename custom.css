@@ -151,6 +151,15 @@ h2 .button .accordion-button{
 @media only screen and (max-width: 769px) {
     .col-9 .alumni-profile-overview-header, button{
         size: smaller !important;
+        height: 50px !important;
+    }
+    .col-10 h2{
+        font-size: 18px !important;
+        text-align: center !important;
+        margin-top: 5px !important;
+    }
+    .col-2 .btn{
+        font-size: 18px !important;
     }
 
 }
