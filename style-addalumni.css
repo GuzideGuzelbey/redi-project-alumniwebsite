@@ -44,9 +44,7 @@ body.no-scroll {
 
 .container-form {
   background-color: #2F8BA4;
-
   width: 100%;
-
 }
 
 
@@ -389,7 +387,7 @@ body.no-scroll {
 
   }
 }
-
+/*
 /* FOOTER */
 footer {
   max-width: 100%;
