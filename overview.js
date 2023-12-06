@@ -203,7 +203,7 @@ function RefreshPage(alumnis){
 //trigger of the add alumni button in the overview page
 
 function NavigateToAddAlumni(){
-    let alumniString = localStorage.getItem("alumnis");
+    let alumniString = localStorage.getItem("alumnis");  //it is not that secure to store a data in a company mostly for the sensitive data
     let alumniArray = alumniString ? JSON.parse(alumniString) : alumnis;
     localStorage.setItem("alumnis",JSON.stringify(alumniArray));
     window.location.href = "addAlumni-form.html"; 
